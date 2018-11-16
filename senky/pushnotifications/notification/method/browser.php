@@ -130,7 +130,11 @@ class browser extends \phpbb\notification\method\base
 				'subject'    => 'localhost',
 				'publicKey'  => $this->config['senky_pushnotifications_public_key'],
 				'privateKey' => $this->config['senky_pushnotifications_private_key'],
-			]
+			],
+			[
+				'batchSize'	=> 50,
+			],
+			3 // timeout is 3 seconds. It is better to discard notification than timeout the posting user.
 		]);
 
 		// Fix for mobile Firefox
