@@ -1,10 +1,10 @@
 <?php
 /**
  *
- * Push Notifications. An extension for the phpBB Forum Software package.
+ * Browser and Mobile Notifications. An extension for the phpBB Forum Software package.
  *
  * @copyright (c) 2018, Jakub Senko
- * @license GNU General Public License, version 2 (GPL-2.0)
+ * @license Proprietary/All rights reserved
  *
  */
 
@@ -14,7 +14,7 @@ class ext extends \phpbb\extension\base
 {
 	public function is_enableable()
 	{
-		return phpbb_version_compare(PHP_VERSION, '5.6.0', '>=') && phpbb_version_compare(PHPBB_VERSION, '3.2.0', '>=') && extension_loaded('gmp') && extension_loaded('mbstring') && extension_loaded('curl') && extension_loaded('openssl');
+		return phpbb_version_compare(PHP_VERSION, '7.1.0', '>=') && phpbb_version_compare(PHPBB_VERSION, '3.2.0', '>=') && extension_loaded('gmp') && extension_loaded('mbstring') && extension_loaded('curl') && extension_loaded('openssl');
 	}
 
 	function purge_step($old_state)
@@ -23,7 +23,6 @@ class ext extends \phpbb\extension\base
 		{
 			case '': // Empty means nothing has run yet
 
-				/** @var \phpbb\db\driver\driver_interface $db */
 				$db = $this->container->get('dbal.conn');
 				$sql = 'DELETE FROM ' . $this->container->getParameter('tables.user_notifications') . "
 						WHERE method = 'senky.pushnotifications.notification.method.browser'";

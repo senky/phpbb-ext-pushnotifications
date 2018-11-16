@@ -1,9 +1,10 @@
 <?php
 /**
  *
- * @package       Push Notifications
- * @copyright (c) LavIgor
- * @license       http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
+ * Browser and Mobile Notifications. An extension for the phpBB Forum Software package.
+ *
+ * @copyright (c) 2018, Jakub Senko
+ * @license Proprietary/All rights reserved
  *
  */
 

@@ -1,9 +1,10 @@
 <?php
 /**
  *
- * @package       Push Notifications
- * @copyright (c) 2017 - 2018 LavIgor
- * @license       http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
+ * Browser and Mobile Notifications. An extension for the phpBB Forum Software package.
+ *
+ * @copyright (c) 2018, Jakub Senko
+ * @license Proprietary/All rights reserved
  *
  */
 
@@ -37,40 +38,21 @@ class browser extends \phpbb\notification\method\base
 		$this->subscriptions_table = $subscriptions_table;
 	}
 
-	/**
-	 * Get notification method name
-	 *
-	 * @return string
-	 */
 	public function get_type()
 	{
 		return 'senky.pushnotifications.notification.method.browser';
 	}
 
-	/**
-	 * Is the method enabled by default?
-	 *
-	 * @return bool
-	 */
 	public function is_enabled_by_default()
 	{
 		return true;
 	}
 
-	/**
-	 * Is this method available for the user?
-	 * This is checked on the notifications options
-	 *
-	 * @return bool
-	 */
 	public function is_available()
 	{
 		return true;
 	}
 
-	/**
-	 * {@inheritdoc}
-	 */
 	public function notify()
 	{
 		// Do not send anything if there is nothing to send
@@ -123,11 +105,6 @@ class browser extends \phpbb\notification\method\base
 		$this->empty_queue();
 	}
 
-	/**
-	 * Loads user data for the recipients
-	 *
-	 * @return array Array of user IDs of the recipients
-	 */
 	protected function setup_users()
 	{
 		// Load all users we want to notify
@@ -146,11 +123,6 @@ class browser extends \phpbb\notification\method\base
 		return $user_ids;
 	}
 
-	/**
-	 * Initializes and returns new WebPush object
-	 *
-	 * @return WebPush
-	 */
 	protected function setup_webpush()
 	{
 		$WebPush = new WebPush([
@@ -174,22 +146,11 @@ class browser extends \phpbb\notification\method\base
 		return $WebPush;
 	}
 
-	/**
-	 * Checks whether the specified user is currently inactive
-	 *
-	 * @param array $user User row from the database
-	 * @return bool
-	 */
 	protected function check_user_inactive($user)
 	{
 		return $user['user_type'] == USER_IGNORE || ($user['user_type'] == USER_INACTIVE && $user['user_inactive_reason'] == INACTIVE_MANUAL);
 	}
 
-	/**
-	 * Retrieves information about registered user subscriptions
-	 *
-	 * @param array $user_ids User IDs of the recipients
-	 */
 	protected function setup_subscriptions(array $user_ids)
 	{
 		$this->user_subscriptions = [];
@@ -213,13 +174,6 @@ class browser extends \phpbb\notification\method\base
 		}
 	}
 
-	/**
-	 * Sets up notifications to be sent for each subscription
-	 *
-	 * @param WebPush $WebPush           WebPush object
-	 * @param int     $user_id           User ID of the recipient
-	 * @param array   $notification_data Array of notification's data
-	 */
 	protected function prepare_push_notifications(WebPush $WebPush, $user_id, array $notification_data)
 	{
 		if (empty($this->user_subscriptions[$user_id]))
@@ -240,13 +194,6 @@ class browser extends \phpbb\notification\method\base
 		}
 	}
 
-	/**
-	 * Handles errors from Push notification servers
-	 * Removes expired subscriptions when needed
-	 *
-	 * @param array|bool $results Array of information for each sent notification
-	 *                            (or bool in case of no errors)
-	 */
 	protected function handle_errors($results)
 	{
 		if (!is_array($results))
@@ -273,12 +220,6 @@ class browser extends \phpbb\notification\method\base
 		}
 	}
 
-	/**
-	 * Returns absolute URLs needed for Push notifications
-	 *
-	 * @param string $url URL relative to phpBB root path (other URLs will be returned unparsed)
-	 * @return string
-	 */
 	protected function make_clean_url($url)
 	{
 		if (strpos($url, $this->phpbb_root_path) !== 0)
@@ -290,12 +231,6 @@ class browser extends \phpbb\notification\method\base
 		return generate_board_url() . '/' . rtrim($filesystem->makePathRelative($url, $this->phpbb_root_path), '/');
 	}
 
-	/**
-	 * Generates correct URL string for user's avatar
-	 *
-	 * @param string $avatar User's avatar image HTML string
-	 * @return string
-	 */
 	protected function get_avatar_url($avatar)
 	{
 		// There's no data field for src - e.g. in Gravatar driver.

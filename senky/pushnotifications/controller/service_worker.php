@@ -1,10 +1,10 @@
 <?php
 /**
  *
- * Push Notifications. An extension for the phpBB Forum Software package.
+ * Browser and Mobile Notifications. An extension for the phpBB Forum Software package.
  *
  * @copyright (c) 2018, Jakub Senko
- * @license GNU General Public License, version 2 (GPL-2.0)
+ * @license Proprietary/All rights reserved
  *
  */
 

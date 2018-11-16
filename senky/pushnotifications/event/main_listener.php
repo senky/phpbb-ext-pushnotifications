@@ -1,23 +1,17 @@
 <?php
 /**
  *
- * Push Notifications. An extension for the phpBB Forum Software package.
+ * Browser and Mobile Notifications. An extension for the phpBB Forum Software package.
  *
  * @copyright (c) 2018, Jakub Senko
- * @license GNU General Public License, version 2 (GPL-2.0)
+ * @license Proprietary/All rights reserved
  *
  */
 
 namespace senky\pushnotifications\event;
 
-/**
- * @ignore
- */
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
-/**
- * Push Notifications Event listener.
- */
 class main_listener implements EventSubscriberInterface
 {
 	static public function getSubscribedEvents()
@@ -25,7 +19,6 @@ class main_listener implements EventSubscriberInterface
 		return array(
 			'core.user_setup'			=> 'load_language_on_setup',
 			'core.page_header'			=> 'load_notification_parameters',
-			'core.session_kill_after'	=> 'unsubscribe_user',
 		);
 	}
 
@@ -56,10 +49,5 @@ class main_listener implements EventSubscriberInterface
 			'U_SENKY_PUSHNOTIFICATIONS_SUBSCRIBE'	=> $this->helper->route('senky_pushnotifications_subscribe'),
 			'U_SENKY_PUSHNOTIFICATIONS_UNSUBSCRIBE'	=> $this->helper->route('senky_pushnotifications_unsubscribe'),
 		));
-	}
-
-	public function unsubscribe_user()
-	{
-		
 	}
 }

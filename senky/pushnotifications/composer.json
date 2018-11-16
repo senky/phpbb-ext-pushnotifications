@@ -3,8 +3,7 @@
     "type": "phpbb-extension",
     "description": "Sends notifications from your board to the user's PC or smartphone even if not viewing your board.",
     "version": "1.0.0",
-    "time": "2018-10-23",
-    "license": "GPL-2.0-only",
+	"license": "Proprietary/All rights reserved",
     "authors": [
         {
             "name": "Jakub Senko",
