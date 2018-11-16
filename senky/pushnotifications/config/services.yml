@@ -1,0 +1,46 @@
+services:
+    senky.pushnotifications.service_worker:
+        class: senky\pushnotifications\controller\service_worker
+        arguments:
+            - '@config'
+            - '@controller.helper'
+            - '@user'
+            - '@language'
+            - '%core.root_path%'
+
+    senky.pushnotifications.controller:
+        class: senky\pushnotifications\controller\main
+        arguments:
+            - '@user'
+            - '@dbal.conn'
+            - '@config'
+            - '@controller.helper'
+            - '@request'
+            - '%core.php_ext%'
+            - '%core.root_path%'
+            - '%core.table_prefix%push_subscriptions'
+
+    senky.pushnotifications.listener:
+        class: senky\pushnotifications\event\main_listener
+        arguments:
+            - '@template'
+            - '@config'
+            - '@controller.helper'
+        tags:
+            - { name: event.listener }
+
+    senky.pushnotifications.notification.method.browser:
+        class: senky\pushnotifications\notification\method\browser
+        shared: false
+        arguments:
+            - '@user_loader'
+            - '@user'
+            - '@config'
+            - '@dbal.conn'
+            - '@log'
+            - '@filesystem'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+            - '%core.table_prefix%push_subscriptions'
+        tags:
+            - { name: notification.method }

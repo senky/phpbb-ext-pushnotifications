@@ -1,0 +1,14 @@
+{% if S_REGISTERED_USER and not S_IS_BOT %}
+	<script type="text/javascript">
+		senky_pushnotifications['notif_list_selector'] = '#notification_list .navbar-footer-content';
+		senky_pushnotifications['notif_list_parent_selector'] = 'navbar-footer-content';
+		senky_pushnotifications['notif_ucp_table_selector'] = '.framed-ucp > .panel';
+		senky_pushnotifications['browser_column_header_selector'] = 'thead th';
+		senky_pushnotifications['notif_types_headers_selector'] = '.notification-table-title';
+
+		document.addEventListener('senky-pushnotifications-unsupported', function() {
+			var last_td = document.querySelector('.framed-ucp table tbody tr:last-child td:last-child');
+			last_td.parentElement.removeChild(last_td);
+		});
+	</script>
+{% endif %}

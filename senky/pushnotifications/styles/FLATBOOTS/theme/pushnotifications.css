@@ -1,0 +1,14 @@
+.senky-pushnotifications-container a {
+	display: inline;
+	padding: 0;
+}
+#notification_list .senky-pushnotifications-wrapper {
+	padding: 8px 10px 0;
+	font-size: 12px;
+	text-align: center;
+	color: #333;
+	margin-bottom: 0;
+}
+#notification_list .senky-pushnotifications-wrapper > span {
+	padding-top: 10px;
+}

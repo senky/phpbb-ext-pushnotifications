@@ -1,0 +1,31 @@
+{% if S_REGISTERED_USER and not S_IS_BOT %}
+	<script type="text/javascript">
+		var senky_pushnotifications = {
+			lang: {
+				ENABLED: '{{ lang('BROWSER_NOTIFICATIONS_ACTION_ENABLED') | e('js') }}',
+				ENABLED_SHORT: '{{ lang('BROWSER_NOTIFICATIONS_ACTION_ENABLED_SHORT') | e('js') }}',
+				OFF: '{{ lang('BROWSER_NOTIFICATIONS_ACTION_DISABLED') | e('js') }}',
+				OFF_SHORT: '{{ lang('BROWSER_NOTIFICATIONS_ACTION_DISABLED_SHORT') | e('js') }}',
+				DISALLOWED: '{{ lang('BROWSER_NOTIFICATIONS_ACTION_DISALLOWED') | e('js') }}', // TODO: presny navod pre kazdy prehliadac
+				DISALLOWED_SHORT: '{{ lang('BROWSER_NOTIFICATIONS_ACTION_DISALLOWED_SHORT') | e('js') }}', // TODO: presny navod pre kazdy prehliadac
+				BROWSER_NOTIFICATIONS: '{{ lang('BROWSER_NOTIFICATIONS') | e('js') }}{{ lang('COLON') | e('js') }}',
+				BROWSER_NOTIFICATIONS_SHORT: '<hr>{{ lang('BROWSER_NOTIFICATIONS_SHORT') | e('js') }}{{ lang('COLON') | e('js') }}',
+				INFORMATION: '{{ lang('INFORMATION') | e('js') }}',
+				UPDATE_FAILED: '{{ lang('BROWSER_NOTIFICATIONS_UPDATE_FAILED') | e('js') }}',
+				UNSUBSCRIBE_FAILED: '{{ lang('BROWSER_NOTIFICATIONS_UNSUBSCRIBE_FAILED') | e('js') }}',
+				MANUAL_TITLE: '{{ lang('BROWSER_NOTIFICATIONS_MANUAL_TITLE') | e('js') }}',
+				MANUAL_DESC_CHROME: '{{ lang('BROWSER_NOTIFICATIONS_MANUAL_CHROME') | e('js') }}',
+				MANUAL_DESC_OPERA: '{{ lang('BROWSER_NOTIFICATIONS_MANUAL_OPERA') | e('js') }}',
+				MANUAL_DESC_EDGE: '{{ lang('BROWSER_NOTIFICATIONS_MANUAL_EDGE') | e('js') }}',
+			},
+			uSubscribe: '{{ U_SENKY_PUSHNOTIFICATIONS_SUBSCRIBE | e('js') }}',
+			uUnsubscribe: '{{ U_SENKY_PUSHNOTIFICATIONS_UNSUBSCRIBE | e('js') }}',
+			serviceWorkerPath: '{{ ROOT_PATH }}senky_pushnotifications_sw.js',
+			serverAPIkey: '{{ SENKY_PUSHNOTIFICATIONS_PUBLIC_KEY }}',
+			inNotificationOptions: {% if MODE == 'notification_options' %}true{% else %}false{% endif %},
+			notification_method_name: '{{ lang('SENKY_PUSHNOTIFICATIONS_NOTIFICATION_METHOD_BROWSER') }}'
+		};
+	</script>
+	{% INCLUDECSS '@senky_pushnotifications/pushnotifications.css' %}
+	{% INCLUDEJS '@senky_pushnotifications/js/notifications.js' %}
+{% endif %}

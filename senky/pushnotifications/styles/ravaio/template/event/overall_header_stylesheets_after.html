@@ -1,0 +1,15 @@
+{% if S_REGISTERED_USER and not S_IS_BOT %}
+	<script type="text/javascript">
+		senky_pushnotifications['notif_list_selector'] = '#notification_list + .dropdown-footer';
+		senky_pushnotifications['notif_list_parent_selector'] = 'dropdown-footer';
+		senky_pushnotifications['notif_ucp_table_selector'] = '#cp-main-inner table';
+		senky_pushnotifications['browser_column_header_selector'] = 'thead th';
+		senky_pushnotifications['notif_types_headers_selector'] = '.table-group td';
+
+		document.addEventListener('senky-pushnotifications-unsupported', function() {
+			document.querySelectorAll('#cp-main-inner table tbody tr:not(.table-group) td:last-child').forEach(function(elem) {
+				elem.parentElement.removeChild(elem);
+			});
+		});
+	</script>
+{% endif %}

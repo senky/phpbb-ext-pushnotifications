@@ -1,0 +1,9 @@
+{% if S_REGISTERED_USER and not S_IS_BOT %}
+	<script type="text/javascript">
+		senky_pushnotifications['notif_list_selector'] = '#notification_list .dropdown-contents .footer';
+		senky_pushnotifications['notif_list_parent_selector'] = 'footer';
+		senky_pushnotifications['notif_ucp_table_selector'] = 'form#ucp table';
+		senky_pushnotifications['browser_column_header_selector'] = 'thead th';
+		senky_pushnotifications['notif_types_headers_selector'] = 'tr.bg3 td';
+	</script>
+{% endif %}

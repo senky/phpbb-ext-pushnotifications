@@ -1,0 +1,7 @@
+.senky-pushnotifications-container a {
+	display: inline;
+	padding: 0;
+}
+#notification_list .senky-pushnotifications-wrapper {
+	margin-bottom: 5px;
+}

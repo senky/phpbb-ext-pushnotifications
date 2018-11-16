@@ -1,0 +1,15 @@
+senky_pushnotifications_sw:
+    path: /senky_pushnotifications_sw.js
+    defaults: { _controller: senky.pushnotifications.service_worker:handle }
+
+senky_pushnotifications_subscribe:
+    path: /notifications/browser/subscribe
+    defaults: { _controller: senky.pushnotifications.controller:subscribe }
+
+senky_pushnotifications_unsubscribe:
+    path: /notifications/browser/unsubscribe
+    defaults: { _controller: senky.pushnotifications.controller:unsubscribe }
+
+senky_pushnotifications_test:
+    path: /notifications/browser/test
+    defaults: { _controller: senky.pushnotifications.service_worker:test }
