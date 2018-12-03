@@ -3,19 +3,24 @@
     "type": "phpbb-extension",
     "description": "Sends notifications from your board to the user's PC or smartphone even if not viewing your board.",
     "version": "1.0.0",
-	"license": "Proprietary/All rights reserved",
+    "license": "Proprietary/All rights reserved",
+    "homepage": "https://senky.github.io/pushnotifications/",
     "authors": [
         {
             "name": "Jakub Senko",
             "email": "jakubsenko@gmail.com"
         }
     ],
+    "support": {
+        "email": "jakubsenko@gmail.com"
+    },
     "require": {
         "php": ">=7.1",
         "composer/installers": "~1.0",
         "minishlink/web-push": "^4.0"
     },
     "extra": {
+        "licensee": "{{LICENSEE}}",
         "display-name": "Browser & Mobile Notifications",
         "soft-require": {
             "phpbb/phpbb": ">=3.2.0,<3.3.0@dev"
