@@ -5,6 +5,7 @@
  *
  * @copyright (c) 2018, Jakub Senko
  * @license Proprietary/All rights reserved
+ * @licensee {{LICENSEE}}
  *
  */
 
