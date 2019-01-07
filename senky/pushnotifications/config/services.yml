@@ -6,6 +6,7 @@ services:
             - '@controller.helper'
             - '@user'
             - '@language'
+            - '@auth'
             - '%core.root_path%'
 
     senky.pushnotifications.controller:
@@ -16,6 +17,7 @@ services:
             - '@config'
             - '@controller.helper'
             - '@request'
+            - '@auth'
             - '%core.php_ext%'
             - '%core.root_path%'
             - '%core.table_prefix%push_subscriptions'
@@ -26,6 +28,7 @@ services:
             - '@template'
             - '@config'
             - '@controller.helper'
+            - '@auth'
         tags:
             - { name: event.listener }
 
@@ -39,6 +42,7 @@ services:
             - '@dbal.conn'
             - '@log'
             - '@filesystem'
+            - '@auth'
             - '%core.root_path%'
             - '%core.php_ext%'
             - '%core.table_prefix%push_subscriptions'

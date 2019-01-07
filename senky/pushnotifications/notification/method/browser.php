@@ -22,11 +22,12 @@ class browser extends \phpbb\notification\method\base
 	protected $db;
 	protected $log;
 	protected $filesystem;
+	protected $auth;
 	protected $phpbb_root_path;
 	protected $php_ext;
 	protected $subscriptions_table;
 	protected $user_subscriptions = [];
-	public function __construct(\phpbb\user_loader $user_loader, \phpbb\user $user, \phpbb\config\config $config, \phpbb\db\driver\driver_interface $db, \phpbb\log\log_interface $log, \phpbb\filesystem\filesystem_interface $filesystem, $phpbb_root_path, $php_ext, $subscriptions_table)
+	public function __construct(\phpbb\user_loader $user_loader, \phpbb\user $user, \phpbb\config\config $config, \phpbb\db\driver\driver_interface $db, \phpbb\log\log_interface $log, \phpbb\filesystem\filesystem_interface $filesystem, \phpbb\auth\auth $auth, $phpbb_root_path, $php_ext, $subscriptions_table)
 	{
 		$this->user_loader = $user_loader;
 		$this->user = $user;
@@ -34,6 +35,7 @@ class browser extends \phpbb\notification\method\base
 		$this->db = $db;
 		$this->log = $log;
 		$this->filesystem = $filesystem;
+		$this->auth = $auth;
 		$this->phpbb_root_path = $phpbb_root_path;
 		$this->php_ext = $php_ext;
 		$this->subscriptions_table = $subscriptions_table;
@@ -51,7 +53,7 @@ class browser extends \phpbb\notification\method\base
 
 	public function is_available()
 	{
-		return true;
+		return $this->auth->acl_get('u_senky_pushnotifications');
 	}
 
 	public function notify()

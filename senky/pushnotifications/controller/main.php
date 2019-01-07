@@ -20,17 +20,19 @@ class main
 	protected $config;
 	protected $helper;
 	protected $request;
+	protected $auth;
 	protected $php_ext;
 	protected $phpbb_root_path;
 	protected $subscriptions_table;
 	protected $subscription_id = 0;
-	public function __construct($user, $db, $config, $helper, $request, $php_ext, $phpbb_root_path, $subscriptions_table)
+	public function __construct(\phpbb\user $user, \phpbb\db\driver\driver_interface $db, \phpbb\config\config $config, \phpbb\controller\helper $helper, $request, \phpbb\auth\auth $auth, $php_ext, $phpbb_root_path, $subscriptions_table)
 	{
 		$this->user = $user;
 		$this->db = $db;
 		$this->config = $config;
 		$this->helper = $helper;
 		$this->request = $request;
+		$this->auth = $auth;
 		$this->php_ext = $php_ext;
 		$this->phpbb_root_path = $phpbb_root_path;
 		$this->subscriptions_table = $subscriptions_table;
@@ -41,6 +43,11 @@ class main
 		if (!$this->request->is_ajax())
 		{
 			redirect(append_sid("{$this->phpbb_root_path}index.{$this->php_ext}"));
+		}
+
+		if (!$this->auth->acl_get('u_senky_pushnotifications'))
+		{
+			throw new \phpbb\exception\http_exception(403);
 		}
 
 		$endpoint = $this->request->variable('endpoint', '', true);
@@ -78,6 +85,11 @@ class main
 		if (!$this->request->is_ajax())
 		{
 			redirect(append_sid("{$this->phpbb_root_path}index.{$this->php_ext}"));
+		}
+
+		if (!$this->auth->acl_get('u_senky_pushnotifications'))
+		{
+			throw new \phpbb\exception\http_exception(403);
 		}
 
 		$endpoint = $this->request->variable('endpoint', '', true);

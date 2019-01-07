@@ -20,18 +20,25 @@ class service_worker
 	protected $helper;
 	protected $user;
 	protected $language;
+	protected $auth;
 	protected $root_path;
-	public function __construct(\phpbb\config\config $config, \phpbb\controller\helper $helper, \phpbb\user $user, \phpbb\language\language $language, $root_path)
+	public function __construct(\phpbb\config\config $config, \phpbb\controller\helper $helper, \phpbb\user $user, \phpbb\language\language $language, \phpbb\auth\auth $auth, $root_path)
 	{
 		$this->config = $config;
 		$this->helper = $helper;
 		$this->user = $user;
 		$this->language = $language;
+		$this->auth = $auth;
 		$this->root_path = $root_path;
 	}
 
 	public function handle()
 	{
+		if (!$this->auth->acl_get('u_senky_pushnotifications'))
+		{
+			throw new \phpbb\exception\http_exception(403);
+		}
+
 		$content = file_get_contents($this->root_path . 'ext/senky/pushnotifications/styles/all/template/js/service_worker.min.js');
 		$content = str_replace([
 			'{{ SERVER_KEY }}',
@@ -53,6 +60,11 @@ class service_worker
 
 	public function test()
 	{
+		if (!$this->auth->acl_get('u_senky_pushnotifications'))
+		{
+			throw new \phpbb\exception\http_exception(403);
+		}
+
 		return new JsonResponse([
 			'user_id'		=> $this->user->data['user_id'],
 			'public_key'	=> $this->config['senky_pushnotifications_public_key'],
