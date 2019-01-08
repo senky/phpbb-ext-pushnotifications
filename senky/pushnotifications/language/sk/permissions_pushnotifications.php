@@ -3,7 +3,7 @@
  *
  * Browser and Mobile Notifications. An extension for the phpBB Forum Software package.
  *
- * @copyright (c) 2018, Jakub Senko
+ * @copyright (c) 2019, Jakub Senko
  * @license Proprietary/All rights reserved
  * @licensee {{LICENSEE}}
  *
