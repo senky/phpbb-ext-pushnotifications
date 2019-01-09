@@ -61,7 +61,6 @@ self.addEventListener('notificationclick', function(event) {
 });
 
 self.addEventListener('push', function(event) {
-	console.log(event);
 	event.waitUntil(
 		// Make sure user is still logged in by requesting the URL.
 		// Also fetch other data along the way.
