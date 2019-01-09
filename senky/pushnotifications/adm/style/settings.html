@@ -1,0 +1,105 @@
+{% include 'overall_header.html' %}
+
+<a id="maincontent"></a>
+
+<h1>{{ lang('ACP_SENKY_PUSHNOTIFICATIONS_SETTINGS') }}</h1>
+<p style="text-align: right;">{{ lang('SENKY_PUSHNOTIFICATIONS_ENABLED_USERS', ENABLED_USERS, TOTAL_USERS, ENABLED_PERCENTAGE) }}</p>
+
+<form id="acp_senky_pushnotifications_settings" method="post" action="{{ U_ACTION }}">
+	<fieldset>
+		<dl>
+			<dt><label for="senky_pushnotifications_popup">{{ lang('DISPLAY_POPUP') ~ lang('COLON') }}</label><br /><span>{{ lang('DISPLAY_POPUP_EXPLAIN') }}</span></dt>
+			<dd>
+				<label><input type="radio" class="radio" id="senky_pushnotifications_popup" name="senky_pushnotifications_popup" value="1"{% if SENKY_PUSHNOTIFICATIONS_POPUP %} checked{% endif %} /> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="senky_pushnotifications_popup" value="0"{% if not SENKY_PUSHNOTIFICATIONS_POPUP %} checked{% endif %} /> {{ lang('NO') }}</label>
+			</dd>
+		</dl>
+	</fieldset>
+
+	<fieldset class="submit-buttons">
+		<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />&nbsp;
+		<input class="button2" type="reset" id="reset" name="reset" value="{{ lang('RESET') }}" />
+		{{ S_FORM_TOKEN }}
+	</fieldset>
+</form>
+
+<style>
+#pop-up-alternatives {
+	z-index: 99999;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 20vh 10vw;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+#pop-up-alternatives .container {
+	width: 100%;
+	max-width: 500px;
+	height: 100%;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 1em;
+	overflow-y: scroll;
+}
+#pop-up-alternatives .container ul {
+	margin-right: 1em;
+}
+#pop-up-alternatives .container li {
+	list-style: none;
+	margin: 20px 0;
+}
+</style>
+<div id="pop-up-alternatives" class="hidden">
+	<div class="container">
+		<h3 style="text-align: center; margin-bottom: 10px;">{{ lang('POP_UP_ALTERNATIVES_HEADER') }}</h3>
+		<p>{{ lang('POP_UP_ALTENRATIVES_P1') }}</p>
+		<p>{{ lang('POP_UP_ALTENRATIVES_P2') }}</p>
+		<ul>
+			<li>
+				<strong>{{ lang('POP_UP_ALTENRATIVES_L1_HEADER') }}</strong><br>
+				<span>{{ lang('POP_UP_ALTENRATIVES_L1_CONTENT') }}</span>
+			</li>
+			<li>
+				<strong>{{ lang('POP_UP_ALTENRATIVES_L2_HEADER') }}</strong><br>
+				<span>{{ lang('POP_UP_ALTENRATIVES_L2_CONTENT') }}</span>
+			</li>
+			<li>
+				<strong>{{ lang('POP_UP_ALTENRATIVES_L3_HEADER') }}</strong><br>
+				<span>{{ lang('POP_UP_ALTENRATIVES_L3_CONTENT') }}</span>
+			</li>
+			<li>
+				<strong>{{ lang('POP_UP_ALTENRATIVES_L4_HEADER') }}</strong><br>
+				<span>{{ lang('POP_UP_ALTENRATIVES_L4_CONTENT') }}</span>
+			</li>
+		</ul>
+		<p>
+			{{ lang('POP_UP_ALTENRATIVES_P3') }}
+		</p>
+		<p style="text-align: center; margin-top: 3em;">
+			<input id="pop-up-alternatives-close" style="text-align: center;" class="button1" type="buttn" value="{{ lang('CLOSE') }}" />
+		</p>
+	</div>
+</div>
+<script>
+// open pop-up
+document.querySelector('#pop-up-alternatives-btn').addEventListener('click', function(e) {
+	e.preventDefault();
+	document.querySelector('#pop-up-alternatives').classList.remove('hidden');
+});
+
+// close pop-up by clicking on the background
+document.querySelector('#pop-up-alternatives').addEventListener('click', function(e) {
+	if (this === e.target) {
+		document.querySelector('#pop-up-alternatives').classList.add('hidden');
+	}
+});
+
+// close pop-up by clicking on the button
+document.querySelector('#pop-up-alternatives-close').addEventListener('click', function() {
+	document.querySelector('#pop-up-alternatives').classList.add('hidden');
+});
+</script>
+
+{% include 'overall_footer.html' %}
