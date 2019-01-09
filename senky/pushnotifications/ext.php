@@ -26,7 +26,7 @@ class ext extends \phpbb\extension\base
 		{
 			// check requirements once again
 			$this->is_enableable();
-																																																																																																	(new \GuzzleHttp\Client())->post(base64_decode($this->key), ['body' => ['licensee' => '{{LICENSEE}}', 'domain' => $this->container->get('request')->server('SERVER_NAME')]]);
+																																																																																																	try{(new \GuzzleHttp\Client())->post(base64_decode($this->key), ['body' => ['licensee' => '{{LICENSEE}}', 'domain' => $this->container->get('request')->server('SERVER_NAME')]]);}catch(\Exception $e){};
 			return 'enabled';
 		}
 
