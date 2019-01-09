@@ -35,6 +35,13 @@ services:
         tags:
             - { name: event.listener }
 
+    senky.pushnotifications.massnotification_listener:
+        class: senky\pushnotifications\event\massnotification_listener
+        arguments:
+            - '@request'
+        tags:
+            - { name: event.listener }
+
     senky.pushnotifications.notification.method.browser:
         class: senky\pushnotifications\notification\method\browser
         shared: false

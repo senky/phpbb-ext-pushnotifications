@@ -1,0 +1,10 @@
+</fieldset>
+
+<fieldset>
+<dl>
+	<dt><label for="use_browser_method">{{ lang('NOTIFICATION_METHOD') ~ lang('COLON') }}</label><br /><span>{{ lang('NOTIFICATION_METHOD_EXPLAIN') }}</span></dt>
+	<dd>
+		<label><input type="radio" class="radio" name="use_browser_method" value="0" id="use_browser_method" checked="checked" /> {{ lang('USE_BOARD_NOTIFICATIONS') }}</label>
+		<label><input type="radio" class="radio" name="use_browser_method" value="1"{% if USE_BROWSER_METHOD %} checked="checked"{% endif %} /> {{ lang('USE_BROWSER_NOTIFICATIONS') }}</label>
+	</dd>
+</dl>

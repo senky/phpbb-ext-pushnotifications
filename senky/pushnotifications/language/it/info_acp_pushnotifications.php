@@ -61,4 +61,10 @@ $lang = array_merge($lang, array(
 	'CLOSE'								=> 'Close',
 
 	'SETTINGS_SAVED'	=> 'Browser and Mobile Notifications settings has been saved.',
+
+	// Mass notification extension
+	'NOTIFICATION_METHOD' 			=> 'Notification method',
+	'NOTIFICATION_METHOD_EXPLAIN'	=> 'You may choose to send notification via Browser and Mobile Notifications Extension instead of traditional board notification method.',
+	'USE_BOARD_NOTIFICATIONS'		=> 'Use board notifications',
+	'USE_BROWSER_NOTIFICATIONS'		=> 'Use browser notifications',
 ));

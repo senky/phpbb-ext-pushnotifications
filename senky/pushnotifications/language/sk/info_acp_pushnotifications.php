@@ -61,4 +61,10 @@ $lang = array_merge($lang, array(
 	'CLOSE'								=> 'Zatvoriť',
 
 	'SETTINGS_SAVED'	=> 'Nastavenia notifikácií v prehliadači a mobile boli uložené.',
+
+	// Mass notification extension
+	'NOTIFICATION_METHOD' 			=> 'Notifikačná metóda',
+	'NOTIFICATION_METHOD_EXPLAIN'	=> 'Namiesto klasickej metódy máte možnosť poslať notifikáciu cez rozšírenie Browser and Mobile Notifications.',
+	'USE_BOARD_NOTIFICATIONS'		=> 'Použiť notifikácie fóra',
+	'USE_BROWSER_NOTIFICATIONS'		=> 'Použiť notifikácie v prehliadači',
 ));

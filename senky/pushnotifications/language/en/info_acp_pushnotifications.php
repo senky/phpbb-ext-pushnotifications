@@ -66,4 +66,10 @@ $lang = array_merge($lang, array(
 	'POPUP_METHOD_ASK_AFTER_LOGIN'	=> '<strong>Ask once after every login.</strong> Your users will be asked once every time they log in whether they wish to receive browser notifications. Confirming, they will see a browser prompt. Denying, they will never see that pop-up again.',
 
 	'SETTINGS_SAVED'	=> 'Browser and Mobile Notifications settings has been saved.',
+
+	// Mass notification extension
+	'NOTIFICATION_METHOD' 			=> 'Notification method',
+	'NOTIFICATION_METHOD_EXPLAIN'	=> 'You may choose to send notification via Browser and Mobile Notifications Extension instead of traditional board notification method.',
+	'USE_BOARD_NOTIFICATIONS'		=> 'Use board notifications',
+	'USE_BROWSER_NOTIFICATIONS'		=> 'Use browser notifications',
 ));
