@@ -2,7 +2,7 @@
     "name": "senky/pushnotifications",
     "type": "phpbb-extension",
     "description": "Sends notifications from your board to the user's PC or smartphone even if not viewing your board.",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "license": "Proprietary/All rights reserved",
     "homepage": "https://senky.github.io/pushnotifications/",
     "authors": [

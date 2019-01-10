@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.1.1 - 2019-01-09
+
+- Fix: BBOOTS and FLATBOOTS styles now load JS file properly
+
 ### 1.1.0 - 2019-01-07
 
 - Feature: Added "Can use browser and mobile notifications" permission
