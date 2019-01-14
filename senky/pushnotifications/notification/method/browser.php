@@ -13,6 +13,7 @@ namespace senky\pushnotifications\notification\method;
 
 use Minishlink\WebPush\WebPush;
 use Minishlink\WebPush\Subscription;
+use phpbb\notification\type\type_interface;
 
 class browser extends \phpbb\notification\method\base
 {
@@ -22,12 +23,12 @@ class browser extends \phpbb\notification\method\base
 	protected $db;
 	protected $log;
 	protected $filesystem;
-	protected $auth;
+	protected $auth_user_loader;
 	protected $phpbb_root_path;
 	protected $php_ext;
 	protected $subscriptions_table;
 	protected $user_subscriptions = [];
-	public function __construct(\phpbb\user_loader $user_loader, \phpbb\user $user, \phpbb\config\config $config, \phpbb\db\driver\driver_interface $db, \phpbb\log\log_interface $log, \phpbb\filesystem\filesystem_interface $filesystem, \phpbb\auth\auth $auth, $phpbb_root_path, $php_ext, $subscriptions_table)
+	public function __construct(\phpbb\user_loader $user_loader, \phpbb\user $user, \phpbb\config\config $config, \phpbb\db\driver\driver_interface $db, \phpbb\log\log_interface $log, \phpbb\filesystem\filesystem_interface $filesystem, \senky\pushnotifications\notification\user_loader $auth_user_loader, $phpbb_root_path, $php_ext, $subscriptions_table)
 	{
 		$this->user_loader = $user_loader;
 		$this->user = $user;
@@ -35,7 +36,7 @@ class browser extends \phpbb\notification\method\base
 		$this->db = $db;
 		$this->log = $log;
 		$this->filesystem = $filesystem;
-		$this->auth = $auth;
+		$this->auth_user_loader = $auth_user_loader;
 		$this->phpbb_root_path = $phpbb_root_path;
 		$this->php_ext = $php_ext;
 		$this->subscriptions_table = $subscriptions_table;
@@ -51,9 +52,14 @@ class browser extends \phpbb\notification\method\base
 		return true;
 	}
 
-	public function is_available()
+	public function is_available(type_interface $notification_type = null, $user_id = false)
 	{
-		return $this->auth->acl_get('u_senky_pushnotifications');
+		if (empty($user_id))
+		{
+			return true;
+		}
+
+		return $this->auth_user_loader->get_user_auth($user_id)->acl_get('u_senky_pushnotifications');
 	}
 
 	public function notify()

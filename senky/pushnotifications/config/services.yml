@@ -29,6 +29,7 @@ services:
             - '@config'
             - '@controller.helper'
             - '@auth'
+            - '@senky.pushnotifications.notification.user_loader'
         tags:
             - { name: event.listener }
 
@@ -42,9 +43,15 @@ services:
             - '@dbal.conn'
             - '@log'
             - '@filesystem'
-            - '@auth'
+            - '@senky.pushnotifications.notification.user_loader'
             - '%core.root_path%'
             - '%core.php_ext%'
             - '%core.table_prefix%push_subscriptions'
         tags:
             - { name: notification.method }
+
+    senky.pushnotifications.notification.user_loader:
+        class: senky\pushnotifications\notification\user_loader
+        arguments:
+            - '@dbal.conn'
+            - '%tables.users%'

@@ -20,8 +20,10 @@ class main_listener implements EventSubscriberInterface
 		return array(
 			'core.permissions'	=> 'permissions',
 
-			'core.user_setup'			=> 'load_language_on_setup',
-			'core.page_header'			=> 'load_notification_parameters',
+			'core.user_setup'	=> 'load_language_on_setup',
+			'core.page_header'	=> 'load_notification_parameters',
+
+			'core.notification_type_check_user_notification_options_before'	=> 'load_users',
 		);
 	}
 
@@ -29,12 +31,14 @@ class main_listener implements EventSubscriberInterface
 	protected $config;
 	protected $helper;
 	protected $auth;
-	public function __construct(\phpbb\template\template $template, \phpbb\config\config $config, \phpbb\controller\helper $helper, \phpbb\auth\auth $auth)
+	protected $user_loader;
+	public function __construct(\phpbb\template\template $template, \phpbb\config\config $config, \phpbb\controller\helper $helper, \phpbb\auth\auth $auth, \senky\pushnotifications\notification\user_loader $user_loader)
 	{
 		$this->template = $template;
 		$this->config = $config;
 		$this->helper = $helper;
 		$this->auth = $auth;
+		$this->user_loader = $user_loader;
 	}
 
 	public function permissions($event)
@@ -63,5 +67,18 @@ class main_listener implements EventSubscriberInterface
 			'U_SENKY_PUSHNOTIFICATIONS_SUBSCRIBE'	=> $this->helper->route('senky_pushnotifications_subscribe'),
 			'U_SENKY_PUSHNOTIFICATIONS_UNSUBSCRIBE'	=> $this->helper->route('senky_pushnotifications_unsubscribe'),
 		]);
+	}
+
+	public function load_users($event)
+	{
+		if (empty($event['user_ids']))
+		{
+			return;
+		}
+
+		foreach ($event['user_ids'] as $user_id)
+		{
+			$this->user_loader->add_user($user_id);
+		}
 	}
 }
