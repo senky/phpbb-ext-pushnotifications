@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.1.2 - 2019-01-15
+
+- Fix: Permission didn't work due to phpBB bug, now it's disabled till fix in phpBB
+
 ### 1.1.1 - 2019-01-09
 
 - Fix: BBOOTS and FLATBOOTS styles now load JS file properly
