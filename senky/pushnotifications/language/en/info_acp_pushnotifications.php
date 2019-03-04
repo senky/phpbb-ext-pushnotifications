@@ -24,8 +24,8 @@ $lang = array_merge($lang, array(
 	'ACP_SENKY_PUSHNOTIFICATIONS_SETTINGS'	=> 'Settings',
 	'ACP_SENKY_PUSHNOTIFICATIONS_TITLE'		=> 'Browser & Mobile Notifications Settings',
 	'SENKY_PUSHNOTIFICATIONS_ENABLED_USERS'	=> [
-		1	=> 'Your board has <strong>%d</strong> user with enabled browser notifications out of %d (%0.2f%%).',
-		2	=> 'Your board has <strong>%d</strong> users with enabled browser notifications out of %d (%0.2f%%).',
+		1	=> 'Your board has <strong>%d</strong> user with browser notifications enabled out of %d (%0.2f%%).',
+		2	=> 'Your board has <strong>%d</strong> users with browser notifications enabled out of %d (%0.2f%%).',
 	],
 
 	'DISPLAY_POPUP'			=> 'Display pop-up',
@@ -59,6 +59,11 @@ $lang = array_merge($lang, array(
 											option to hunt down the remaining users. Pop‑up won\'t be displayed to users who already
 											enabled or disabled notifications, so don\'t worry about aready decided users.',
 	'CLOSE'								=> 'Close',
+
+	'POPUP_METHOD'					=> 'Pop-up method',
+	'POPUP_METHOD_EXPLAIN'			=> 'Since you have decided to display a pop-up to encourage users to allow browser notifications, here you have two options on how to display it. The first option is less invasive and also gives user a chance to understand what are the advantages of enabling browser notifications. The second option is less intrusive, but may lead to many denials.',
+	'POPUP_METHOD_ONLY_PROMPT'		=> '<strong>Display directly prompt.</strong> Your users will see the browser prompt directly on all pages they visit until they confirm or deny it.',
+	'POPUP_METHOD_ASK_AFTER_LOGIN'	=> '<strong>Ask once after every login.</strong> Your users will be asked once every time they log in whether they wish to receive browser notifications. Confirming, they will see a browser prompt. Denying, they will never see that pop-up again.',
 
 	'SETTINGS_SAVED'	=> 'Browser and Mobile Notifications settings has been saved.',
 ));

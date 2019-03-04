@@ -38,6 +38,7 @@ class m3_acp_module extends \phpbb\db\migration\migration
 	{
 		return [
 			['config.add', ['senky_pushnotifications_popup', 0]],
+			['config.add', ['senky_pushnotifications_popup_method', 'ask_after_login']],
 
 			['module.add', [
 				'acp',

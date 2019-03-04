@@ -52,6 +52,7 @@ class main_module
 			}
 
 			$this->config->set('senky_pushnotifications_popup', $this->request->variable('senky_pushnotifications_popup', 0));
+			$this->config->set('senky_pushnotifications_popup_method', $this->request->variable('senky_pushnotifications_popup_method', ''));
 
 			trigger_error($this->language->lang('SETTINGS_SAVED') . adm_back_link($this->u_action));
 		}
@@ -70,11 +71,12 @@ class main_module
 		$this->db->sql_freeresult($result);
 
 		$this->template->assign_vars([
-			'U_ACTION'						=> $this->u_action,
-			'SENKY_PUSHNOTIFICATIONS_POPUP'	=> $this->config['senky_pushnotifications_popup'],
-			'ENABLED_USERS'					=> (int) $enabled_users,
-			'TOTAL_USERS'					=> $total_users,
-			'ENABLED_PERCENTAGE'			=> round((100 / $total_users) * $enabled_users, 2),
+			'U_ACTION'								=> $this->u_action,
+			'SENKY_PUSHNOTIFICATIONS_POPUP'			=> $this->config['senky_pushnotifications_popup'],
+			'SENKY_PUSHNOTIFICATIONS_POPUP_METHOD'	=> $this->config['senky_pushnotifications_popup_method'],
+			'ENABLED_USERS'							=> (int) $enabled_users,
+			'TOTAL_USERS'							=> $total_users,
+			'ENABLED_PERCENTAGE'					=> round((100 / $total_users) * $enabled_users, 2),
 		]);
 	}
 }

@@ -42,4 +42,7 @@ $lang = array_merge($lang, array(
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_FIREFOX_FOR_ANDROID'	=> '<ol><li>Tap the Control Center icon (lock), left to the address bar.</li><li>Tap Edit Site Settings.</li><li>Check Notifications.</li><li>Refresh this page.</li></ol>',
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_UC_FOR_ANDROID'		=> '<ol><li>Tap Menu from the bottom bar.</li><li>Tap Settings icon, then Notification Settings and then Site Notifications.</li><li>Find URL of this site and tap Clear.</li><li>Refresh this page and enable notifications once more.</li></ol>',
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_SAMSUNG_FOR_ANDROID'	=> '<ol><li>To the right of the address bar, tap Menu (three dots).</li><li>Tap Settings, then Advanced, then Web Notifications.</li><li>Find URL of this site and toggle the switch.</li><li>Refresh this page.</li></ol>',
+
+	'BROWSER_NOTIFICATIONS_POPUP_TITLE'	=> 'Browser notifications',
+	'BROWSER_NOTIFICATIONS_POPUP_TEXT'	=> 'This board allows you to receive notifications directly to your browser - even when it is closed. You will never miss anything important and you can always choose what type of notifications you receive or turn them all off. Do you want to opt-in now?<br><br><span style="display: block; text-align: center;"><a class="button1 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Yes, please</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button2 alert_close" style="cursor: pointer; float: none; margin-right: 0;">No</a></span>',
 ));

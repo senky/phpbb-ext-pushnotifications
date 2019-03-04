@@ -1,7 +1,6 @@
 (function() {
 	// Register service worker. This will be done on every page to make sure notifications are delivered.
 	if ('serviceWorker' in navigator && 'PushManager' in window) {
-	//if (false) {
 		navigator.serviceWorker.register(senky_pushnotifications.serviceWorkerPath)
 		.catch(function(err) {
 			console.log('err registration', err); // TODO
@@ -11,13 +10,14 @@
 		//    - prepare label wrappers to inform user about the state of the notifications
 		//    - automatically subscribe user if permission is granted
 		//    - update labels with notification status
+		//    - display pop-up when applicable
 		navigator.serviceWorker.ready.then(function(registration) {
 			registration.pushManager.getSubscription().then(function(subscription) {
 				// Prepare label wrapper(s).
 				var statusLabelWrapper = document.createElement('p');
 				statusLabelWrapper.className = 'senky-pushnotifications-wrapper';
 				document.querySelector(senky_pushnotifications.notif_list_selector).appendChild(statusLabelWrapper);
-				
+
 				if (senky_pushnotifications.inNotificationOptions) {
 					var $table = document.querySelector(senky_pushnotifications.notif_ucp_table_selector);
 					$table.parentNode.insertBefore(statusLabelWrapper.cloneNode(true), $table);
@@ -42,6 +42,8 @@
 					updateLabel();
 				}
 			});
+
+			displayPopup();
 		});
 	} else if (senky_pushnotifications.inNotificationOptions) { // Hide browser settings for unsupported browsers.
 		// Remove Browser column header
@@ -132,16 +134,18 @@
 			desc = senky_pushnotifications.lang.MANUAL_DESC_SAMSUNG_FOR_ANDROID;
 		} else if (navigator.userAgent.toLowerCase().indexOf("android") > -1 && !!window.chrome) { // Chrome for Android
 			desc = senky_pushnotifications.lang.MANUAL_DESC_CHROME_FOR_ANDROID;
-		} else if (!!window.chrome && !!window.chrome.webstore) { // Chrome Desktop
-			desc = senky_pushnotifications.lang.MANUAL_DESC_CHROME;
 		} else if ((!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0) { // Opera
 			desc = senky_pushnotifications.lang.MANUAL_DESC_OPERA;
 		} else if (window.navigator.userAgent.indexOf("Edge") > -1) { // Edge
 			desc = senky_pushnotifications.lang.MANUAL_DESC_EDGE;
+		} else if (!!window.chrome) { // Chrome Desktop
+			desc = senky_pushnotifications.lang.MANUAL_DESC_CHROME;
 		}
 		// Firefox doesn't support disabled notifications. It's either enabled or default.
 
-		phpbb.alert(title, desc);
+		if (desc) {
+			phpbb.alert(title, desc);
+		}
 	}
 
 	function subscribeUser(e) {
@@ -157,8 +161,10 @@
 				updateSubscriptionOnServer(subscription);
 				localStorage.setItem('senky_pushnotifications_receive', true);
 				updateLabel();
-			}).catch(function() {
-				phpbb.alert(senky_pushnotifications.lang.INFORMATION, senky_pushnotifications.lang.UPDATE_FAILED);
+			}).catch(function(err) {
+				if (Notification.permission !== 'denied') {
+					phpbb.alert(senky_pushnotifications.lang.INFORMATION, senky_pushnotifications.lang.UPDATE_FAILED);
+				}
 				updateLabel();
 			});
 		});
@@ -239,5 +245,18 @@
 			outputArray[i] = rawData.charCodeAt(i);
 		}
 		return outputArray;
+	}
+
+	function displayPopup() {
+		if (Notification.permission === 'default' && senky_pushnotifications.displayPopup) {
+			if (senky_pushnotifications.popupMethod == 'only_prompt') {
+				subscribeUser();
+			} else {
+				phpbb.alert(senky_pushnotifications.lang.POPUP_TITLE, senky_pushnotifications.lang.POPUP_TEXT);
+				document.querySelector('.alert_text .button1').addEventListener('click', function(e) {
+					subscribeUser(e);
+				});
+			}
+		}
 	}
 })();

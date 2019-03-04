@@ -22,13 +22,17 @@
 				MANUAL_DESC_FIREFOX_FOR_ANDROID: '{{ lang('BROWSER_NOTIFICATIONS_MANUAL_DESC_FIREFOX_FOR_ANDROID') | e('js') }}',
 				MANUAL_DESC_UC_FOR_ANDROID: '{{ lang('BROWSER_NOTIFICATIONS_MANUAL_DESC_UC_FOR_ANDROID') | e('js') }}',
 				MANUAL_DESC_SAMSUNG_FOR_ANDROID: '{{ lang('BROWSER_NOTIFICATIONS_MANUAL_DESC_SAMSUNG_FOR_ANDROID') | e('js') }}',
+				POPUP_TITLE: '{{ lang('BROWSER_NOTIFICATIONS_POPUP_TITLE') | e('js') }}',
+				POPUP_TEXT: '{{ lang('BROWSER_NOTIFICATIONS_POPUP_TEXT') | e('js') }}'
 			},
 			uSubscribe: '{{ U_SENKY_PUSHNOTIFICATIONS_SUBSCRIBE | e('js') }}',
 			uUnsubscribe: '{{ U_SENKY_PUSHNOTIFICATIONS_UNSUBSCRIBE | e('js') }}',
 			serviceWorkerPath: '{{ ROOT_PATH }}senky_pushnotifications_sw.js',
 			serverAPIkey: '{{ SENKY_PUSHNOTIFICATIONS_PUBLIC_KEY }}',
 			inNotificationOptions: {% if MODE == 'notification_options' %}true{% else %}false{% endif %},
-			notification_method_name: '{{ lang('SENKY_PUSHNOTIFICATIONS_NOTIFICATION_METHOD_BROWSER') }}'
+			notification_method_name: '{{ lang('SENKY_PUSHNOTIFICATIONS_NOTIFICATION_METHOD_BROWSER') }}',
+			displayPopup: {% if S_SENKY_PUSHNOTIFICATIONS_DISPLAY_POPUP %}true{% else %}false{% endif %},
+			popupMethod: '{{ S_SENKY_PUSHNOTIFICATIONS_POPUP_METHOD | e('js') }}'
 		};
 	</script>
 	{% INCLUDECSS '@senky_pushnotifications/pushnotifications.min.css' %}

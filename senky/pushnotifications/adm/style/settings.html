@@ -14,6 +14,14 @@
 				<label><input type="radio" class="radio" name="senky_pushnotifications_popup" value="0"{% if not SENKY_PUSHNOTIFICATIONS_POPUP %} checked{% endif %} /> {{ lang('NO') }}</label>
 			</dd>
 		</dl>
+
+		<dl id="senky_pushnotifications_popup_method_container"{% if not SENKY_PUSHNOTIFICATIONS_POPUP %} class="hidden"{% endif %}>
+			<dt style="box-sizing: border-box; padding-left: 20px; margin-right: -20px; border-right: none;"><label for="senky_pushnotifications_popup_method">{{ lang('POPUP_METHOD') ~ lang('COLON') }}</label><br /><span>{{ lang('POPUP_METHOD_EXPLAIN') }}</span></dt>
+			<dd>
+				<label style="white-space: normal;"><input type="radio" class="radio" id="senky_pushnotifications_popup_method" name="senky_pushnotifications_popup_method" value="ask_after_login"{% if SENKY_PUSHNOTIFICATIONS_POPUP_METHOD == 'ask_after_login' %} checked{% endif %} /> {{ lang('POPUP_METHOD_ASK_AFTER_LOGIN') }}</label><br><br>
+				<label style="white-space: normal;"><input type="radio" class="radio" name="senky_pushnotifications_popup_method" value="only_prompt"{% if SENKY_PUSHNOTIFICATIONS_POPUP_METHOD == 'only_prompt' %} checked{% endif %} /> {{ lang('POPUP_METHOD_ONLY_PROMPT') }}</label>
+			</dd>
+		</dl>
 	</fieldset>
 
 	<fieldset class="submit-buttons">
@@ -95,10 +103,20 @@ document.querySelector('#pop-up-alternatives').addEventListener('click', functio
 		document.querySelector('#pop-up-alternatives').classList.add('hidden');
 	}
 });
-
 // close pop-up by clicking on the button
 document.querySelector('#pop-up-alternatives-close').addEventListener('click', function() {
 	document.querySelector('#pop-up-alternatives').classList.add('hidden');
+});
+
+document.querySelectorAll('input[name="senky_pushnotifications_popup"]').forEach(function(elem) {
+	elem.addEventListener('change', function() {
+		var container = document.querySelector('#senky_pushnotifications_popup_method_container');
+		if (this.value == 1) {
+			container.classList.remove('hidden');
+		} else {
+			container.classList.add('hidden');
+		}
+	});
 });
 </script>
 
