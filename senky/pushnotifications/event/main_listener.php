@@ -45,10 +45,10 @@ class main_listener implements EventSubscriberInterface
 	{
 		$permissions = $event['permissions'];
 		$permissions['u_senky_pushnotifications'] = [
-			'lang'	=> 'ACL_U_SENKY_PUSHNOTIFICATIONS',
-			'cat'	=> 'misc',
+			'lang' => 'ACL_U_SENKY_PUSHNOTIFICATIONS',
+			'cat' => 'misc'
 		];
-		$permissions['permissions'] = $permissions;
+		$event['permissions'] = $permissions;
 	}
 
 	public function load_language_on_setup($event)
