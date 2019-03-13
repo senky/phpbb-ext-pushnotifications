@@ -18,7 +18,7 @@ class main_listener implements EventSubscriberInterface
 	static public function getSubscribedEvents()
 	{
 		return array(
-			'core.permissions'	=> 'permissions',
+			//'core.permissions'	=> 'permissions',
 
 			'core.user_setup'	=> 'load_language_on_setup',
 			'core.page_header'	=> 'load_notification_parameters',
@@ -41,15 +41,15 @@ class main_listener implements EventSubscriberInterface
 		$this->user_loader = $user_loader;
 	}
 
-	public function permissions($event)
-	{
-		$permissions = $event['permissions'];
-		$permissions['u_senky_pushnotifications'] = [
-			'lang' => 'ACL_U_SENKY_PUSHNOTIFICATIONS',
-			'cat' => 'misc'
-		];
-		$event['permissions'] = $permissions;
-	}
+	// public function permissions($event)
+	// {
+	// 	$permissions = $event['permissions'];
+	// 	$permissions['u_senky_pushnotifications'] = [
+	// 		'lang' => 'ACL_U_SENKY_PUSHNOTIFICATIONS',
+	// 		'cat' => 'misc'
+	// 	];
+	// 	$event['permissions'] = $permissions;
+	// }
 
 	public function load_language_on_setup($event)
 	{

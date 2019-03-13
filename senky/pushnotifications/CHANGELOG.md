@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.1.3 - 2019-03-13
+
+- Fix: Permission was causing the problem with accessing service worker
+
 ### 1.1.2 - 2019-01-15
 
 - Fix: Permission didn't work due to phpBB bug, now it's disabled till fix in phpBB
