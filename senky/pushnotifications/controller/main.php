@@ -45,10 +45,10 @@ class main
 			redirect(append_sid("{$this->phpbb_root_path}index.{$this->php_ext}"));
 		}
 
-		if (!$this->auth->acl_get('u_senky_pushnotifications'))
-		{
-			throw new \phpbb\exception\http_exception(403);
-		}
+		// if (!$this->auth->acl_get('u_senky_pushnotifications'))
+		// {
+		// 	throw new \phpbb\exception\http_exception(403);
+		// }
 
 		$endpoint = $this->request->variable('endpoint', '', true);
 		$keys = $this->request->variable('keys', array('' => ''), true);
@@ -87,10 +87,10 @@ class main
 			redirect(append_sid("{$this->phpbb_root_path}index.{$this->php_ext}"));
 		}
 
-		if (!$this->auth->acl_get('u_senky_pushnotifications'))
-		{
-			throw new \phpbb\exception\http_exception(403);
-		}
+		// if (!$this->auth->acl_get('u_senky_pushnotifications'))
+		// {
+		// 	throw new \phpbb\exception\http_exception(403);
+		// }
 
 		$endpoint = $this->request->variable('endpoint', '', true);
 		$keys = $this->request->variable('keys', array('' => ''), true);
