@@ -64,7 +64,7 @@ class main_listener implements EventSubscriberInterface
 	public function load_notification_parameters($event)
 	{
 		$this->template->assign_vars([
-			'S_SENKY_PUSHNOTIFICATIONS'				=> $this->auth->acl_get('u_senky_pushnotifications'),
+			'S_SENKY_PUSHNOTIFICATIONS'				=> true,// $this->auth->acl_get('u_senky_pushnotifications'),
 			'SENKY_PUSHNOTIFICATIONS_PUBLIC_KEY'	=> $this->config['senky_pushnotifications_public_key'],
 			'U_SENKY_PUSHNOTIFICATIONS_SUBSCRIBE'	=> $this->helper->route('senky_pushnotifications_subscribe'),
 			'U_SENKY_PUSHNOTIFICATIONS_UNSUBSCRIBE'	=> $this->helper->route('senky_pushnotifications_unsubscribe'),

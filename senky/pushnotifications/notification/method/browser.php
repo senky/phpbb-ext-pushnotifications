@@ -59,7 +59,7 @@ class browser extends \phpbb\notification\method\base
 			return true;
 		}
 
-		return $this->auth_user_loader->get_user_auth($user_id)->acl_get('u_senky_pushnotifications');
+		return true;// $this->auth_user_loader->get_user_auth($user_id)->acl_get('u_senky_pushnotifications');
 	}
 
 	public function notify()
