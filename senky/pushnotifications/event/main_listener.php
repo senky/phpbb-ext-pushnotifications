@@ -18,12 +18,12 @@ class main_listener implements EventSubscriberInterface
 	static public function getSubscribedEvents()
 	{
 		return array(
-			//'core.permissions'	=> 'permissions',
+			'core.permissions'	=> 'permissions',
 
 			'core.user_setup'	=> 'load_language_on_setup',
 			'core.page_header'	=> 'load_notification_parameters',
 
-			'core.notification_type_check_user_notification_options_before'	=> 'load_users',
+			//'core.notification_type_check_user_notification_options_before'	=> 'load_users',
 		);
 	}
 
@@ -41,15 +41,15 @@ class main_listener implements EventSubscriberInterface
 		$this->user_loader = $user_loader;
 	}
 
-	// public function permissions($event)
-	// {
-	// 	$permissions = $event['permissions'];
-	// 	$permissions['u_senky_pushnotifications'] = [
-	// 		'lang' => 'ACL_U_SENKY_PUSHNOTIFICATIONS',
-	// 		'cat' => 'misc'
-	// 	];
-	// 	$event['permissions'] = $permissions;
-	// }
+	public function permissions($event)
+	{
+		$permissions = $event['permissions'];
+		$permissions['u_senky_pushnotifications'] = [
+			'lang' => 'ACL_U_SENKY_PUSHNOTIFICATIONS',
+			'cat' => 'misc'
+		];
+		$event['permissions'] = $permissions;
+	}
 
 	public function load_language_on_setup($event)
 	{
@@ -64,23 +64,23 @@ class main_listener implements EventSubscriberInterface
 	public function load_notification_parameters($event)
 	{
 		$this->template->assign_vars([
-			'S_SENKY_PUSHNOTIFICATIONS'				=> true,// $this->auth->acl_get('u_senky_pushnotifications'),
+			'S_SENKY_PUSHNOTIFICATIONS'				=> $this->auth->acl_get('u_senky_pushnotifications'),
 			'SENKY_PUSHNOTIFICATIONS_PUBLIC_KEY'	=> $this->config['senky_pushnotifications_public_key'],
 			'U_SENKY_PUSHNOTIFICATIONS_SUBSCRIBE'	=> $this->helper->route('senky_pushnotifications_subscribe'),
 			'U_SENKY_PUSHNOTIFICATIONS_UNSUBSCRIBE'	=> $this->helper->route('senky_pushnotifications_unsubscribe'),
 		]);
 	}
 
-	public function load_users($event)
-	{
-		if (empty($event['user_ids']))
-		{
-			return;
-		}
+	// public function load_users($event)
+	// {
+	// 	if (empty($event['user_ids']))
+	// 	{
+	// 		return;
+	// 	}
 
-		foreach ($event['user_ids'] as $user_id)
-		{
-			$this->user_loader->add_user($user_id);
-		}
-	}
+	// 	foreach ($event['user_ids'] as $user_id)
+	// 	{
+	// 		$this->user_loader->add_user($user_id);
+	// 	}
+	// }
 }

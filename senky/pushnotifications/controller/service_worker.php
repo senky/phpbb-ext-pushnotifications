@@ -34,10 +34,10 @@ class service_worker
 
 	public function handle()
 	{
-		// if (!$this->auth->acl_get('u_senky_pushnotifications'))
-		// {
-		// 	throw new \phpbb\exception\http_exception(403);
-		// }
+		if (!$this->auth->acl_get('u_senky_pushnotifications'))
+		{
+			throw new \phpbb\exception\http_exception(403);
+		}
 
 		$content = file_get_contents($this->root_path . 'ext/senky/pushnotifications/styles/all/template/js/service_worker.min.js');
 		$content = str_replace([
@@ -60,10 +60,10 @@ class service_worker
 
 	public function test()
 	{
-		// if (!$this->auth->acl_get('u_senky_pushnotifications'))
-		// {
-		// 	throw new \phpbb\exception\http_exception(403);
-		// }
+		if (!$this->auth->acl_get('u_senky_pushnotifications'))
+		{
+			throw new \phpbb\exception\http_exception(403);
+		}
 
 		return new JsonResponse([
 			'user_id'		=> $this->user->data['user_id'],
