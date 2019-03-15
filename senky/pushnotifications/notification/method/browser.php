@@ -23,12 +23,14 @@ class browser extends \phpbb\notification\method\base
 	protected $db;
 	protected $log;
 	protected $filesystem;
+	protected $request;
+	protected $auth;
 	protected $auth_user_loader;
 	protected $phpbb_root_path;
 	protected $php_ext;
 	protected $subscriptions_table;
 	protected $user_subscriptions = [];
-	public function __construct(\phpbb\user_loader $user_loader, \phpbb\user $user, \phpbb\config\config $config, \phpbb\db\driver\driver_interface $db, \phpbb\log\log_interface $log, \phpbb\filesystem\filesystem_interface $filesystem, \senky\pushnotifications\notification\user_loader $auth_user_loader, $phpbb_root_path, $php_ext, $subscriptions_table)
+	public function __construct(\phpbb\user_loader $user_loader, \phpbb\user $user, \phpbb\config\config $config, \phpbb\db\driver\driver_interface $db, \phpbb\log\log_interface $log, \phpbb\filesystem\filesystem_interface $filesystem, \phpbb\request\request $request, \phpbb\auth\auth $auth, \senky\pushnotifications\notification\user_loader $auth_user_loader, $phpbb_root_path, $php_ext, $subscriptions_table)
 	{
 		$this->user_loader = $user_loader;
 		$this->user = $user;
@@ -36,6 +38,8 @@ class browser extends \phpbb\notification\method\base
 		$this->db = $db;
 		$this->log = $log;
 		$this->filesystem = $filesystem;
+		$this->request = $request;
+		$this->auth = $auth;
 		$this->auth_user_loader = $auth_user_loader;
 		$this->phpbb_root_path = $phpbb_root_path;
 		$this->php_ext = $php_ext;
@@ -54,6 +58,12 @@ class browser extends \phpbb\notification\method\base
 
 	public function is_available(type_interface $notification_type = null, $user_id = false)
 	{
+		// display browser column only when user has permission
+		if ($this->request->variable('mode', '') == 'notification_options')
+		{
+			return $this->auth->acl_get('u_senky_pushnotifications');
+		}
+
 		if (empty($user_id))
 		{
 			return true;

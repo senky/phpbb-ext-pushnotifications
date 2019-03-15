@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.1.4 - 2019-03-13
+
+- Added: Permissions now work again!
+- Fix: Browser column was displayed in notification options even when permission wasn't set
+
 ### 1.1.3 - 2019-03-13
 
 - Fix: Permission was causing the problem with accessing service worker

@@ -1,5 +1,5 @@
 {% if S_REGISTERED_USER and not S_IS_BOT and S_SENKY_PUSHNOTIFICATIONS %}
-	<script type="text/javascript">
+	<script>
 		var senky_pushnotifications = {
 			lang: {
 				ENABLED: '{{ lang('BROWSER_NOTIFICATIONS_ACTION_ENABLED') | e('js') }}',
