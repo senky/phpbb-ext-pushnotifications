@@ -42,4 +42,7 @@ $lang = array_merge($lang, array(
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_FIREFOX_FOR_ANDROID'	=> '<ol><li>Click vào biểu tượng Control Center ở bên trái thanh địa chỉ.</li><li>Chọn Cài đặt trang web.</li><li>Bật cho phép thông báo.</li><li>Click vào nút tải lại trang.</li></ol>',
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_UC_FOR_ANDROID'		=> '<ol><li>Click vào Menu thanh điều hướng bên dưới.</li><li>Chọn Cài đặt, Cài đặt thông báo, Thông báo của trang web.</li><li>Tìm URL của website và click Xóa.</li><li>Click tải lại trang và bật thông báo.</li></ol>',
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_SAMSUNG_FOR_ANDROID'	=> '<ol><li>Ở bên phải thanh địa chỉ, Chọn Menu (có dấu 3 chấm).</li><li>Chọn Cài đặt, Nâng cao, Thông báo web.</li><li>Tìm URL của website và bật nó lên.</li><li>Click vào nút tải lại trang.</li></ol>',
+
+	'BROWSER_NOTIFICATIONS_POPUP_TITLE'	=> 'Browser notifications',
+	'BROWSER_NOTIFICATIONS_POPUP_TEXT'	=> 'This board allows you to receive notifications directly to your browser - even when it is closed. You will never miss anything important and you can always choose what type of notifications you receive or turn them all off. Do you want to opt-in now?<br><br><span style="display: block; text-align: center;"><a class="button1 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Yes, please</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button2 alert_close" style="cursor: pointer; float: none; margin-right: 0;">No</a></span>',
 ));

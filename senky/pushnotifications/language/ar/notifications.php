@@ -42,4 +42,7 @@ $lang = array_merge($lang, array(
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_FIREFOX_FOR_ANDROID'	=> '<ol><li>اضغط على رمز مركز التحكم (القفل)، بجانب شريط العنوان.</li><li>انقر فوق تحرير إعدادات الموقع.</li><li>اضغط على خيار الإخطارات.</li><li>قم بتحديث هذه الصفحة.</li></ol>',
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_UC_FOR_ANDROID'		=> '<ol><li>انقر على "القائمة" من الشريط السفلي.</li><li>اضغط على أيقونة الإعدادات ، ثم إعدادات الإشعارات ثم إشعارات الموقع.</li><li>ابحث عن عنوان هذا الموقع وانقر على مسح.</li><li>قم بتحديث هذه الصفحة وفعل الإشعارات مرة أخرى.</li></ol>',
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_SAMSUNG_FOR_ANDROID'	=> '<ol><li>بجانب شريط العناوين، انقر على القائمة (ثلاث نقاط).</li><li>انقر فوق الإعدادات ، ثم متقدم ، ثم إشعارات الويب.</li><li>ابحث عن عنوان هذا الموقع وقم بتبديل المفتاح.</li><li>قم بتحديث هذه الصفحة.</li></ol>',
+
+	'BROWSER_NOTIFICATIONS_POPUP_TITLE'	=> 'Browser notifications',
+	'BROWSER_NOTIFICATIONS_POPUP_TEXT'	=> 'This board allows you to receive notifications directly to your browser - even when it is closed. You will never miss anything important and you can always choose what type of notifications you receive or turn them all off. Do you want to opt-in now?<br><br><span style="display: block; text-align: center;"><a class="button1 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Yes, please</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button2 alert_close" style="cursor: pointer; float: none; margin-right: 0;">No</a></span>',
 ));

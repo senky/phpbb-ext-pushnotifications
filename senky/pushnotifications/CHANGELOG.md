@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.2.0 - 2019-05-28
+
+- Feature: Ability to display pop-up to prompt users to enable browser notifications!
+- Feature: Support for Mass Notification extension
+- Feature: Statistics of usage (in ACP module)
+
 ### 1.1.4 - 2019-03-13
 
 - Added: Permissions now work again!

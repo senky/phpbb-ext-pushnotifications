@@ -42,4 +42,7 @@ $lang = array_merge($lang, array(
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_FIREFOX_FOR_ANDROID'	=> '<ol><li>Kliknij okrągłą ikonę "i" lub "kłódkę" na lewo od paska adresu</li><li>Edytuj ustawienia witryny</li><li>Zaznacz opcję Powiadomienia</li><li>Odśwież stronę i zaakceptuj powiadomienia dla witryny forum</li></ol>',
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_UC_FOR_ANDROID'		=> '<ol><li>Przejdź do ustawień przeglądarki (trzy kropki/paski)</li><li>Kliknij ikonę Ustawień, a następnie Ustawienia Powiadomień</li><li>Włącz powiadomienia</li><li>Odśwież stronę i zaakceptuj powiadomienia dla witryny forum</li></ol>',
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_SAMSUNG_FOR_ANDROID'	=> '<ol><li>Przejdź do ustawień przeglądarki (trzy kropki/paski)</li><li>Kliknij Ustawienia, następnie zaawansowane i Powiadomienia</li><li>Włącz powiadomienia</li><li>Odśwież stronę i zaakceptuj powiadomienia dla witryny forum</li></ol>',
+
+	'BROWSER_NOTIFICATIONS_POPUP_TITLE'	=> 'Browser notifications',
+	'BROWSER_NOTIFICATIONS_POPUP_TEXT'	=> 'This board allows you to receive notifications directly to your browser - even when it is closed. You will never miss anything important and you can always choose what type of notifications you receive or turn them all off. Do you want to opt-in now?<br><br><span style="display: block; text-align: center;"><a class="button1 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Yes, please</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button2 alert_close" style="cursor: pointer; float: none; margin-right: 0;">No</a></span>',
 ));
