@@ -20,56 +20,60 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-	'ACP_SENKY_PUSHNOTIFICATIONS_CAT' 		=> 'Browser & Mobile Notifications',
-	'ACP_SENKY_PUSHNOTIFICATIONS_SETTINGS'	=> 'Settings',
-	'ACP_SENKY_PUSHNOTIFICATIONS_TITLE'		=> 'Browser & Mobile Notifications Settings',
+	'ACP_SENKY_PUSHNOTIFICATIONS_CAT' 		=> 'Browser & Mobile Notificaties',
+	'ACP_SENKY_PUSHNOTIFICATIONS_SETTINGS'	=> 'Instellingen',
+	'ACP_SENKY_PUSHNOTIFICATIONS_TITLE'		=> 'Browser & Mobile Notificaties Instellingen',
 	'SENKY_PUSHNOTIFICATIONS_ENABLED_USERS'	=> [
-		1	=> 'Your board has <strong>%d</strong> user with browser notifications enabled out of %d (%0.2f%%).',
-		2	=> 'Your board has <strong>%d</strong> users with browser notifications enabled out of %d (%0.2f%%).',
+		1	=> 'Uw forum heeft <strong>%d</strong> gebruiker met browser notificaties ingeschakeld van de %d (%0.2f%%).',
+		2	=> 'Uw forum heeft <strong>%d</strong> gebruikers met browser notificaties ingeschakeld van de %d (%0.2f%%).',
 	],
 
-	'DISPLAY_POPUP'			=> 'Display pop-up',
-	'DISPLAY_POPUP_EXPLAIN'	=> 'Set to yes to display pop-up to your users after they log in prompting them to enable browser notifications. They will be able to reject and hide pop-up, but it is likely that you will receive more conversions this way than any other. On the other hand, this method might seem too invasive for the users and they may reject notifications of momentary fear. Thus this method should be used with caution.<br><br>&raquo; <a id="pop-up-alternatives-btn" href="#">See different approaches</a>',
+	'DISPLAY_POPUP'			=> 'Pop-up weergeven',
+	'DISPLAY_POPUP_EXPLAIN'	=> 'Stel in op yes om pop-up weer te geven aan uw gebruikers nadat ze zich hebben aangemeld en hen vragen om browser notificaties in te schakelen. Ze kunnen de pop-up weigeren en verbergen, maar het is waarschijnlijk dat u op deze manier meer conversies ontvangt dan andere. Aan de andere kant lijkt deze methode misschien te ingrijpend voor de gebruikers en kunnen ze notificaties van tijdelijke angst afwijzen. Dus deze methode moet met voorzichtigheid worden gebruikt.<br><br>&raquo; <a id="pop-up-alternatives-btn" href="#">Zie andere benaderingen</a>',
 
-	'POP_UP_ALTERNATIVES_HEADER'		=> 'How to encourage users to enable browser notifications',
-	'POP_UP_ALTENRATIVES_P1'			=> 'Making users click on that weird browser pop-up is not an easy task. Many usability
-											tests dealing with this scenario resulted in the same recommendation: never ask users
-											permission before they can clearly see advantage of it. That\'s why this extension
-											offers browser notification in places where user deals with board notifications.',
-	'POP_UP_ALTENRATIVES_P2'			=> 'But it is clearly understandable that you want users to get advantage of this fantastic feature. So here are few recommended ways to do it in a non-aggressive way:',
-	'POP_UP_ALTENRATIVES_L1_HEADER'		=> 'Post an announcement',
-	'POP_UP_ALTENRATIVES_L1_CONTENT'	=> 'If you know that your users are regularly reading the announcements, just post
-											a new one informing them what browser notifications are, what is the advantage
-											of it and how to enable them.',
-	'POP_UP_ALTENRATIVES_L2_HEADER'		=> 'Send PM to everyone',
-	'POP_UP_ALTENRATIVES_L2_CONTENT'	=> 'Nothing is more personal in phpBB than a private message. It will not hide from
-											user sight because of that glowing unread PM count number in the header. And your
-											users deserve a positive message from admin once in a while, don\'t they?',
-	'POP_UP_ALTENRATIVES_L3_HEADER'		=> 'Use Board Announcements extension',
+	'POP_UP_ALTERNATIVES_HEADER'		=> 'Hoe gebruikers aan te moedigen om browser notificaties in te schakelen',
+	'POP_UP_ALTENRATIVES_P1'			=> 'Gebruikers laten klikken op die rare browser pop-up is geen gemakkelijke taak. Veel bruikbaarheid
+                                            tests die dit scenario behandelden resulteerden in dezelfde aanbeveling: vraag nooit gebruikers
+                                            toestemming voordat ze duidelijk het voordeel ervan kunnen zien. Dat is waarom deze extensie 
+											een browser notificatie biedt op plaatsen waar de gebruiker te maken heeft met forum notificaties.',
+	'POP_UP_ALTENRATIVES_P2'			=> 'Maar het is duidelijk begrijpelijk dat u wilt dat gebruikers voordeel halen uit deze fantastische functie. Dus hier zijn enkele aanbevolen manieren om het op een niet-agressieve manier te doen:',
+	'POP_UP_ALTENRATIVES_L1_HEADER'		=> 'Plaats een aankondiging',
+	'POP_UP_ALTENRATIVES_L1_CONTENT'	=> 'Als u weet dat uw gebruikers regelmatig de aankondigingen lezen, plaats dan een 
+	                                        nieuw bericht met informatie over browser notificaties, wat hiervan het voordeel is 
+											en hoe u deze kunt inschakelen.',
+	'POP_UP_ALTENRATIVES_L2_HEADER'		=> 'Stuur PB naar iedereen',
+	'POP_UP_ALTENRATIVES_L2_CONTENT'	=> 'Niets is persoonlijker in phpBB dan een privébericht. Het zal niet verborgen 
+	                                        blijven voor het zicht van de gebruiker vanwege dat gloeiende ongelezen PB 
+											tel nummer bovenaan. En uw gebruikers verdienen af en toe een positief bericht 
+											van de beheerder, of niet soms?',
+	'POP_UP_ALTENRATIVES_L3_HEADER'		=> 'Gebruik de extensie: “Board Announcements”.',
 	'POP_UP_ALTENRATIVES_L3_CONTENT'	=> '<a target="_blank" href="https://www.phpbb.com/customise/db/extension/boardannouncements/">Board
-											Announcements</a> is a great official extension enabling you to display a message
-											on every board page. This extension and a few encouraging words are enough to boost
-											the usage counter.',
-	'POP_UP_ALTENRATIVES_L4_HEADER'		=> 'Send mass notification',
-	'POP_UP_ALTENRATIVES_L4_CONTENT'	=> 'Never heard of such an option? My new extension
+											Announcements</a> is een geweldige officiële extensie waarmee je een bericht op elke 
+											forumpagina kunt weergeven. Deze uitbreiding en enkele bemoedigende woorden zijn 
+											voldoende om het gebruik van de extensie te stimuleren.',
+	'POP_UP_ALTENRATIVES_L4_HEADER'		=> 'Verzend massa notificatie',
+	'POP_UP_ALTENRATIVES_L4_CONTENT'	=> 'Nog nooit van een dergelijke optie gehoord? Mijn nieuwe extensie
 											<a target="_blank" href="https://www.phpbb.com/customise/db/extension/massnotification/">Mass
-											notification</a> allows you to send a one-time board notification. So while your users
-											are reading the notification, they might just hit that Enable button right below.',
-	'POP_UP_ALTENRATIVES_P3'			=> 'Still not confident? If the suggestions above didn\'t help, you might consider using pop‑up
-											option to hunt down the remaining users. Pop‑up won\'t be displayed to users who already
-											enabled or disabled notifications, so don\'t worry about aready decided users.',
-	'CLOSE'								=> 'Close',
+											notification</a> staat u toe om een eenmalige notificatie te sturen. Dus terwijl uw 
+											gebruikers de notificatie lezen, kunnen ze ook onmiddellijk op onderaan op de knop klikken 
+											op de extensie te activeren.',
+	'POP_UP_ALTENRATIVES_P3'			=> 'Heb je nog steeds geen vertrouwen? Als de bovenstaande suggesties niet hebben geholpen, 
+	                                        kunt u de pop-up optie gebruiken om de resterende gebruikers op te sporen. 
+											Pop-up wordt niet weergegeven voor gebruikers die de extensie al hebben 
+											ingeschakeld of uitgeschakeld, dus maak je geen zorgen over de 
+											gebruikers die al een besluit gemaakt hebben..',
+	'CLOSE'								=> 'Sluit',
 
-	'POPUP_METHOD'					=> 'Pop-up method',
-	'POPUP_METHOD_EXPLAIN'			=> 'Since you have decided to display a pop-up to encourage users to allow browser notifications, here you have two options on how to display it. The first option is less invasive and also gives user a chance to understand what are the advantages of enabling browser notifications. The second option is less intrusive, but may lead to many denials.',
-	'POPUP_METHOD_ONLY_PROMPT'		=> '<strong>Display directly prompt.</strong> Your users will see the browser prompt directly on all pages they visit until they confirm or deny it.',
-	'POPUP_METHOD_ASK_AFTER_LOGIN'	=> '<strong>Ask once after every login.</strong> Your users will be asked once every time they log in whether they wish to receive browser notifications. Confirming, they will see a browser prompt. Denying, they will never see that pop-up again.',
+	'POPUP_METHOD'					=> 'Pop-up methode',
+	'POPUP_METHOD_EXPLAIN'			=> 'Aangezien u hebt besloten om een pop-up weer te geven om gebruikers aan te moedigen browser notificaties toe te staan, heeft u hier twee opties voor het weergeven ervan. De eerste optie is minder opdringerig en geeft de gebruiker ook een kans om te begrijpen wat de voordelen zijn van het inschakelen van browser notificaties. De tweede optie is minder opdringerig, maar kan tot veel weigeringen leiden.',
+	'POPUP_METHOD_ONLY_PROMPT'		=> '<strong>Toon direct pop-up.</strong> Uw gebruikers zien de browser pop-up direct op alle pagina’s die ze bezoeken totdat ze dit bevestigen of weigeren.',
+	'POPUP_METHOD_ASK_AFTER_LOGIN'	=> '<strong>Vraag één keer na elke login.</strong> Uw gebruikers zullen één keer bij iedere login gevraagd worden of ze browser notificaties willen ontvangen. Toestaan, ze zullen een browser pop-up zien. Weigeren, ze zullen die pop-up nooit meer zien.',
 
-	'SETTINGS_SAVED'	=> 'Browser and Mobile Notifications settings has been saved.',
+	'SETTINGS_SAVED'	=> 'Instellingen voor browser en mobiele notificaties zijn opgeslagen.',
 
 	// Mass notification extension
-	'NOTIFICATION_METHOD' 			=> 'Notification method',
-	'NOTIFICATION_METHOD_EXPLAIN'	=> 'You may choose to send notification via Browser and Mobile Notifications Extension instead of traditional board notification method.',
-	'USE_BOARD_NOTIFICATIONS'		=> 'Use board notifications',
-	'USE_BROWSER_NOTIFICATIONS'		=> 'Use browser notifications',
+	'NOTIFICATION_METHOD' 			=> 'Notificatie methode',
+	'NOTIFICATION_METHOD_EXPLAIN'	=> 'U kunt ervoor kiezen om een notificaties te verzenden via de Browser en Mobiele Notificaties Extensie in plaats van de traditionele forum notificatie methode.',
+	'USE_BOARD_NOTIFICATIONS'		=> 'Gebruik forum notificaties',
+	'USE_BROWSER_NOTIFICATIONS'		=> 'Gebruik browser notificaties',
 ));
