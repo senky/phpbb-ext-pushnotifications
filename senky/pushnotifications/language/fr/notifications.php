@@ -22,10 +22,10 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	'SENKY_PUSHNOTIFICATIONS_NOTIFICATION_METHOD_BROWSER' => 'Navigateur',
 
-	'BROWSER_NOTIFICATIONS_ACTION_ENABLED'			=> ' <strong>On</strong>. Vous ne manquerez aucune notification de ce forum. <a href="javascript:;" id="senky-pushnotifications-btn-unsubscribe">Désactivez ?</a>',
-	'BROWSER_NOTIFICATIONS_ACTION_ENABLED_SHORT'	=> ' <strong>On</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-unsubscribe">Désactiver ?</a>',
-	'BROWSER_NOTIFICATIONS_ACTION_DISABLED'			=> ' <strong>Off</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Cliquez ici pour activer les notifications du navigateur</a>.',
-	'BROWSER_NOTIFICATIONS_ACTION_DISABLED_SHORT'	=> ' <strong>Off</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Enable?</a>',
+	'BROWSER_NOTIFICATIONS_ACTION_ENABLED'			=> ' <strong>Activés</strong>. Vous ne manquerez aucune notification de ce forum. <a href="javascript:;" id="senky-pushnotifications-btn-unsubscribe">Désactivez ?</a>',
+	'BROWSER_NOTIFICATIONS_ACTION_ENABLED_SHORT'	=> ' <strong>Activés</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-unsubscribe">Désactiver ?</a>',
+	'BROWSER_NOTIFICATIONS_ACTION_DISABLED'			=> ' <strong>Désactivées</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Cliquez ici pour activer les notifications du navigateur</a>.',
+	'BROWSER_NOTIFICATIONS_ACTION_DISABLED_SHORT'	=> ' <strong>Désactivées</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Enable?</a>',
 	'BROWSER_NOTIFICATIONS_ACTION_DISALLOWED'		=> ' <strong>Désactivation forcée</strong>. <a href=javascript:;" id="senky-pushnotifications-btn-enable">Comment les activer ?</a>',
 	'BROWSER_NOTIFICATIONS_ACTION_DISALLOWED_SHORT'	=> ' <strong>Désactivées</strong>. <a href=javascript:;" id="senky-pushnotifications-btn-enable">Comment les activer ?</a>',
 	'BROWSER_NOTIFICATIONS'							=> 'Notification du navigateur',
@@ -43,6 +43,6 @@ $lang = array_merge($lang, array(
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_UC_FOR_ANDROID'		=> '<ol><li>Cliquez sur Menu de la barre du bas.</li><li>Cliquez sur l\'icone Options, puis sur Options de Notification et enfin Notifications du site.</li><li>Trouvez l\'URL de ce site et cliquez sur Supprimer.</li><li>Rafraîchissez cette page et autoriser les notifications encore une fois.</li></ol>',
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_SAMSUNG_FOR_ANDROID'	=> '<ol><li>Sur la droite de votre barre d\'adresse, cliquez sur Menu (les trois points).</li><li>Cliquez sur Options, puis Avancées, puis Notifications Web.</li><li>Trouver l\'URL de ce site et activer le sélecteur.</li><li>Rafraîchissez cette page.</li></ol>',
 
-	'BROWSER_NOTIFICATIONS_POPUP_TITLE'	=> 'Browser notifications',
-	'BROWSER_NOTIFICATIONS_POPUP_TEXT'	=> 'This board allows you to receive notifications directly to your browser - even when it is closed. You will never miss anything important and you can always choose what type of notifications you receive or turn them all off. Do you want to opt-in now?<br><br><span style="display: block; text-align: center;"><a class="button1 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Yes, please</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button2 alert_close" style="cursor: pointer; float: none; margin-right: 0;">No</a></span>',
+	'BROWSER_NOTIFICATIONS_POPUP_TITLE'	=> 'Notification de navigateur',
+	'BROWSER_NOTIFICATIONS_POPUP_TEXT'	=> 'Ce forum vous permet de recevoir des notifications directement sur votre navigateur, même lorsqu\'il est fermé. Vous ne manquerez jamais rien d\'important et vous pouvez toujours choisir le type de notifications que vous recevez ou les désactiver. Voulez-vous vous les activer maintenant ?<br><br><span style="display: block; text-align: center;"><a class="button1 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Oui, s\'il vous plaît</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button2 alert_close" style="cursor: pointer; float: none; margin-right: 0;">No</a></span>',
 ));
