@@ -57,7 +57,7 @@ $lang = array_merge($lang, array(
 											are reading the notification, they might just hit that Enable button right below.',
 	'POP_UP_ALTENRATIVES_P3'			=> 'Still not confident? If the suggestions above didn\'t help, you might consider using pop‑up
 											option to hunt down the remaining users. Pop‑up won\'t be displayed to users who already
-											enabled or disabled notifications, so don\'t worry about aready decided users.',
+											enabled or disabled notifications, so don\'t worry about already decided users.',
 	'CLOSE'								=> 'Close',
 
 	'POPUP_METHOD'					=> 'Pop-up method',
