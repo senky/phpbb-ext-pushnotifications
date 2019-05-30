@@ -20,5 +20,5 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-	'ACL_U_SENKY_PUSHNOTIFICATIONS' => 'يمكن استخدام إشعارات المتصفح والجوال',
+	'ACL_U_SENKY_PUSHNOTIFICATIONS' => 'يمكنه استخدام إشعارات المتصفح والجوال',
 ));
