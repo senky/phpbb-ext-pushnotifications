@@ -22,14 +22,14 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	'SENKY_PUSHNOTIFICATIONS_NOTIFICATION_METHOD_BROWSER' => 'Browser',
 
-	'BROWSER_NOTIFICATIONS_ACTION_ENABLED'			=> ' <strong>An</strong>. Du wirst keine Nachrichten von diesem Board verpassen. <a href="javascript:;" id="senky-pushnotifications-btn-unsubscribe">Deaktivieren?</a>',
-	'BROWSER_NOTIFICATIONS_ACTION_ENABLED_SHORT'	=> ' <strong>An</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-unsubscribe">Deaktivieren?</a>',
-	'BROWSER_NOTIFICATIONS_ACTION_DISABLED'			=> ' <strong>Aus</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Klicke hier, um die Browser-Benachrichtigungen zu aktivieren</a>.',
-	'BROWSER_NOTIFICATIONS_ACTION_DISABLED_SHORT'	=> ' <strong>Aus</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Aktivieren??</a>',
+	'BROWSER_NOTIFICATIONS_ACTION_ENABLED'			=> ' <strong>Aktiviert</strong>. Du wirst keine Nachrichten von diesem Board verpassen. <a href="javascript:;" id="senky-pushnotifications-btn-unsubscribe">Deaktivieren?</a>',
+	'BROWSER_NOTIFICATIONS_ACTION_ENABLED_SHORT'	=> ' <strong>Aktiviert</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-unsubscribe">Deaktivieren?</a>',
+	'BROWSER_NOTIFICATIONS_ACTION_DISABLED'			=> ' <strong>Deaktiviert</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Klicke hier, um die Browser-Benachrichtigungen zu aktivieren</a>.',
+	'BROWSER_NOTIFICATIONS_ACTION_DISABLED_SHORT'	=> ' <strong>Deaktiviert</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Aktivieren??</a>',
 	'BROWSER_NOTIFICATIONS_ACTION_DISALLOWED'		=> ' <strong>Deaktiviert erzwungen</strong>. <a href=javascript:;" id="senky-pushnotifications-btn-enable">Wie können sie aktiviert werden?</a>',
 	'BROWSER_NOTIFICATIONS_ACTION_DISALLOWED_SHORT'	=> ' <strong>Deaktiviert</strong>. <a href=javascript:;" id="senky-pushnotifications-btn-enable">Wie aktivieren?</a>',
 	'BROWSER_NOTIFICATIONS'							=> 'Browser-Benachrichtigungen für diesen Browser',
-	'BROWSER_NOTIFICATIONS_SHORT'					=> 'Browser-Benachrichtigunge',
+	'BROWSER_NOTIFICATIONS_SHORT'					=> 'Browser-Benachrichtigungen',
 	'BROWSER_NOTIFICATIONS_UPDATE_FAILED'			=> 'Ein Fehler ist beim Abonnieren der Internet-Benachrichtigungen aufgetreten (vermutlich ein Verbindungsfehler bei der Kommunikation mit dem Server). Sie wurden in diesem Browser deaktiviert. Bitte prüfe deine Internetverbindung und versuche es erneut. Kontaktiere die Board-Administrations, falls das Problem weiterhin besteht.',
 	'BROWSER_NOTIFICATIONS_UNSUBSCRIBE_FAILED'		=> 'Ein Fehler ist beim Abbestellen der Internet-Benachrichtigungen aufgetreten (vermutlich ein Verbindungsfehler bei der Kommunikation mit dem Server). Sie wurden in diesem Browser deaktiviert. Bitte prüfe deine Internetverbindung und versuche es erneut. Kontaktiere die Board-Administrations, falls das Problem weiterhin besteht.',
 
@@ -43,6 +43,6 @@ $lang = array_merge($lang, array(
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_UC_FOR_ANDROID'		=> '<ol><li>Tippe in der Fußleiste auf das Menü.</li><li>Tippe auf das „Einstellungen“-Symbol, danach auf Benachrichtigungs-Einstellungen und dann auf Seiten-Benachrichtigungen.</li><li>Finde die URL dieser Seite und tippe auf „löschen“.</li><li>Aktualisiere diese Seite und aktivierere die Benachrichtigungen erneut.</li></ol>',
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_SAMSUNG_FOR_ANDROID'	=> '<ol><li>Tippe rechts von der Adresszeile auf das Menü (drei Punkte).</li><li>Tippe auf Einstellungen, dann zu Erweitert, dann auf Internet-Benachrichtigungen.</li><li>Finde die URL dieser Seite und verändere den Schalter.</li><li>Aktualisiere diese Seite</li></ol>',
 
-	'BROWSER_NOTIFICATIONS_POPUP_TITLE'	=> 'Browser notifications',
-	'BROWSER_NOTIFICATIONS_POPUP_TEXT'	=> 'This board allows you to receive notifications directly to your browser - even when it is closed. You will never miss anything important and you can always choose what type of notifications you receive or turn them all off. Do you want to opt-in now?<br><br><span style="display: block; text-align: center;"><a class="button1 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Yes, please</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button2 alert_close" style="cursor: pointer; float: none; margin-right: 0;">No</a></span>',
+	'BROWSER_NOTIFICATIONS_POPUP_TITLE'	=> 'Browser-Benachrichtigungen',
+	'BROWSER_NOTIFICATIONS_POPUP_TEXT'	=> 'Dieses Board erlaubt es dir Benachrichtigungen direkt in deinem Browser zu empfangen. So wirst du niemals etwas Spannendes verpassen und du kannst immer auswählen, welche Arten von Benachrichtigungen du empfängst oder sie einfach alle ausschalten. Willst du sie jetzt aktivieren?<br><br><span style="display: block; text-align: center;"><a class="button1 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Ja, bitte</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button2 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Nein</a></span>',
 ));
