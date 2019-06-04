@@ -26,7 +26,7 @@ $lang = array_merge($lang, array(
 	'BROWSER_NOTIFICATIONS_ACTION_ENABLED_SHORT'	=> ' <strong>On</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-unsubscribe">Disattiva?</a>',
 	'BROWSER_NOTIFICATIONS_ACTION_DISABLED'			=> ' <strong>Off</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Fai clic qui per attivare le notifiche Web</a>.',
 	'BROWSER_NOTIFICATIONS_ACTION_DISABLED_SHORT'	=> ' <strong>Off</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Attiva?</a>',
-	'BROWSER_NOTIFICATIONS_ACTION_DISALLOWED'		=> ' <strong>Disattivate forzatamente</strong>. <a href=javascript:;" id="senky-pushnotifications-btn-enable">Come attivarle?</a>',
+	'BROWSER_NOTIFICATIONS_ACTION_DISALLOWED'		=> ' <strong>Disattivazione Forzata</strong>. <a href=javascript:;" id="senky-pushnotifications-btn-enable">Come attivarle?</a>',
 	'BROWSER_NOTIFICATIONS_ACTION_DISALLOWED_SHORT'	=> ' <strong>Disattivate</strong>. <a href=javascript:;" id="senky-pushnotifications-btn-enable">Come attivarle?</a>',
 	'BROWSER_NOTIFICATIONS'							=> 'Notifiche Web per questo browser',
 	'BROWSER_NOTIFICATIONS_SHORT'					=> 'Notifiche Web',
@@ -43,6 +43,6 @@ $lang = array_merge($lang, array(
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_UC_FOR_ANDROID'		=> '<ol><li>Tocca il Menù dalla barra in basso.</li><li>Tocca l\'icona Impostazioni, dopo seleziona Impostazioni Notifiche e dopo Notifiche del sito.</li><li>Trova l\'URL di questo sito e tocca Cancella.</li><li>aggiorna la pagina e attiva le notifiche ancora una volta.</li></ol>',
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_SAMSUNG_FOR_ANDROID'	=> '<ol><li>A destra della barra degli indirizzi, Tocca Menù (tre punti).</li><li>Tocca Impostazioni, dopo selezione Avanzate, dopo selezione Notifiche Web.</li><li>Trova l\'URL di questo sito e attiva o disattiva l\'opzione.</li><li>Aggiorna la pagina.</li></ol>',
 
-	'BROWSER_NOTIFICATIONS_POPUP_TITLE'	=> 'Browser notifications',
-	'BROWSER_NOTIFICATIONS_POPUP_TEXT'	=> 'This board allows you to receive notifications directly to your browser - even when it is closed. You will never miss anything important and you can always choose what type of notifications you receive or turn them all off. Do you want to opt-in now?<br><br><span style="display: block; text-align: center;"><a class="button1 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Yes, please</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button2 alert_close" style="cursor: pointer; float: none; margin-right: 0;">No</a></span>',
+	'BROWSER_NOTIFICATIONS_POPUP_TITLE'	=> 'Notifiche Web',
+	'BROWSER_NOTIFICATIONS_POPUP_TEXT'	=> 'Questo forum vi permette di ricevere notifiche direttamente sul vostro browser - anche quando è chiuso. Non perderai nessuna cosa importante e puoi sempre scegliere quale tipo di notifiche ricevere oppure puoi disattivarle tutte. Vuoi attivarle ora?<br><br><span style="display: block; text-align: center;"><a class="button1 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Si, per piacere</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button2 alert_close" style="cursor: pointer; float: none; margin-right: 0;">No</a></span>',
 ));
