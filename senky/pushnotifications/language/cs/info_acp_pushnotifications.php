@@ -20,56 +20,42 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-	'ACP_SENKY_PUSHNOTIFICATIONS_CAT' 		=> 'Browser & Mobile Notifications',
-	'ACP_SENKY_PUSHNOTIFICATIONS_SETTINGS'	=> 'Settings',
-	'ACP_SENKY_PUSHNOTIFICATIONS_TITLE'		=> 'Browser & Mobile Notifications Settings',
+	'ACP_SENKY_PUSHNOTIFICATIONS_CAT' 		=> 'Upozornění přes prohlížeč',
+	'ACP_SENKY_PUSHNOTIFICATIONS_SETTINGS'	=> 'Nastavení',
+	'ACP_SENKY_PUSHNOTIFICATIONS_TITLE'		=> 'Nastavení upozornění přes prohlížeč',
 	'SENKY_PUSHNOTIFICATIONS_ENABLED_USERS'	=> [
-		1	=> 'Your board has <strong>%d</strong> user with browser notifications enabled out of %d (%0.2f%%).',
-		2	=> 'Your board has <strong>%d</strong> users with browser notifications enabled out of %d (%0.2f%%).',
+		1	=> 'Upozornění využívá <strong>%d</strong> uživatel fóra z celkového počtu %d (%0.2f%%).',
+		2	=> 'Upozornění využívají <strong>%d</strong> uživatelé z celkového počtu %d (%0.2f%%).',
+		3	=> 'Upozornění využívá <strong>%d</strong> uživatelů z celkového počtu %d (%0.2f%%).',
 	],
 
-	'DISPLAY_POPUP'			=> 'Display pop-up',
-	'DISPLAY_POPUP_EXPLAIN'	=> 'Set to yes to display pop-up to your users after they log in prompting them to enable browser notifications. They will be able to reject and hide pop-up, but it is likely that you will receive more conversions this way than any other. On the other hand, this method might seem too invasive for the users and they may reject notifications of momentary fear. Thus this method should be used with caution.<br><br>&raquo; <a id="pop-up-alternatives-btn" href="#">See different approaches</a>',
+	'DISPLAY_POPUP'			=> 'Vyskakovací okno',
+	'DISPLAY_POPUP_EXPLAIN'	=> 'Zde můžete povolit zda se má zobrazit vyskakovací okno s možnostní odběru oznámení z fóra pomocí upozornění přes prohlížeč.<br />Jedná se o nepřehlédnutelný způsob jak uživatele upozornit na možnost těchto upozornění, ale zároveň se jedná o velice agresivní způsob jenž může zapřícinit zamítnutí odběru upozornění.<br><br>&raquo; <a id="pop-up-alternatives-btn" href="#">Další možnosti informování uživatelů</a>',
 
-	'POP_UP_ALTERNATIVES_HEADER'		=> 'How to encourage users to enable browser notifications',
-	'POP_UP_ALTENRATIVES_P1'			=> 'Making users click on that weird browser pop-up is not an easy task. Many usability
-											tests dealing with this scenario resulted in the same recommendation: never ask users
-											permission before they can clearly see advantage of it. That\'s why this extension
-											offers browser notification in places where user deals with board notifications.',
-	'POP_UP_ALTENRATIVES_P2'			=> 'But it is clearly understandable that you want users to get advantage of this fantastic feature. So here are few recommended ways to do it in a non-aggressive way:',
-	'POP_UP_ALTENRATIVES_L1_HEADER'		=> 'Post an announcement',
-	'POP_UP_ALTENRATIVES_L1_CONTENT'	=> 'If you know that your users are regularly reading the announcements, just post
-											a new one informing them what browser notifications are, what is the advantage
-											of it and how to enable them.',
-	'POP_UP_ALTENRATIVES_L2_HEADER'		=> 'Send PM to everyone',
-	'POP_UP_ALTENRATIVES_L2_CONTENT'	=> 'Nothing is more personal in phpBB than a private message. It will not hide from
-											user sight because of that glowing unread PM count number in the header. And your
-											users deserve a positive message from admin once in a while, don\'t they?',
-	'POP_UP_ALTENRATIVES_L3_HEADER'		=> 'Use Board Announcements extension',
-	'POP_UP_ALTENRATIVES_L3_CONTENT'	=> '<a target="_blank" href="https://www.phpbb.com/customise/db/extension/boardannouncements/">Board
-											Announcements</a> is a great official extension enabling you to display a message
-											on every board page. This extension and a few encouraging words are enough to boost
-											the usage counter.',
-	'POP_UP_ALTENRATIVES_L4_HEADER'		=> 'Send mass notification',
-	'POP_UP_ALTENRATIVES_L4_CONTENT'	=> 'Never heard of such an option? My new extension
-											<a target="_blank" href="https://www.phpbb.com/customise/db/extension/massnotification/">Mass
-											notification</a> allows you to send a one-time board notification. So while your users
-											are reading the notification, they might just hit that Enable button right below.',
-	'POP_UP_ALTENRATIVES_P3'			=> 'Still not confident? If the suggestions above didn\'t help, you might consider using pop‑up
-											option to hunt down the remaining users. Pop‑up won\'t be displayed to users who already
-											enabled or disabled notifications, so don\'t worry about aready decided users.',
-	'CLOSE'								=> 'Close',
+	'POP_UP_ALTERNATIVES_HEADER'		=> 'Jak upozornit uživatele na možnost upozornění přes prohlížeč',
+	'POP_UP_ALTENRATIVES_P1'			=> 'Uživatele na možnost těchto upozornění lze upozornit pomocí vyskakovacího okna. Jedná se ale o agresivní způsob, a uživatelé většinou tuto možnost rovnou zamítnou. Není dobré uživatele hned nutit k přihlášení oznámení dokud se nemohou předvědčit o výhodách. Lepší je na tuto možnost upozornit uživatele na místech, kde si hlídají důležité informace z fóra.',
+	'POP_UP_ALTENRATIVES_P2'			=> 'Samozřejmě je jasné, že chcete aby uživatelé o této funkci věděli a mohli jí využívat. Zde je pár doporučení jak je o možnosti informovat:',
+	'POP_UP_ALTENRATIVES_L1_HEADER'		=> 'Napsat oznámení',
+	'POP_UP_ALTENRATIVES_L1_CONTENT'	=> 'Pokud víte, že uživatelé čtou oznámení, můžete napsat oznámení či globální oznámení a v něm uvést informace o této funkci s postupem jejího zapnutí.',
+	'POP_UP_ALTENRATIVES_L2_HEADER'		=> 'Zaslat soukromou zprávu',
+	'POP_UP_ALTENRATIVES_L2_CONTENT'	=> 'V systému phpBB není nic osobnějšího než soukromá zpráva. Uživatelé si jednou za čas zaslouží příjemnou zprávu od administrátora. Navíc není lehké přehlédnout, že se ve schránce nachází nová soukromá zpráva.',
+	'POP_UP_ALTENRATIVES_L3_HEADER'		=> 'Použít rozšíření Oznámení fóra',
+	'POP_UP_ALTENRATIVES_L3_CONTENT'	=> '<a target="_blank" href="https://www.phpbb.com/customise/db/extension/boardannouncements/">Oznámení fóra</a> je skvělé rozšíření přímo od tvůrců systému phpBB. Umožňuje zobrazit zprávu na každé stránce fóra a tu není jednoduché přehlédnout.',
+	'POP_UP_ALTENRATIVES_L4_HEADER'		=> 'Zaslat hromadné upozornění',
+	'POP_UP_ALTENRATIVES_L4_CONTENT'	=> 'Ještě jste neslyšeli o této možnosti? Moje nové rozšíření <a target="_blank" href="https://www.phpbb.com/customise/db/extension/massnotification/">Hromadné upozornění</a> umožňuje uživatelům zaslat jednorázové upozornění. A povolit upozornění přes prohlížeč mohou přímo ze zaslaného upozornění!',
+	'POP_UP_ALTENRATIVES_P3'			=> 'Pokud se rozhodnete použít možnost vyskakovacího okna, nemusíte se bát přílišného otravování uživatelů. Vyskakovací okno se uživateli zobrazí pouze jednou a po vybrání volby se již dále nezobrazuje.',
+	'CLOSE'								=> 'Zavřít',
 
-	'POPUP_METHOD'					=> 'Pop-up method',
-	'POPUP_METHOD_EXPLAIN'			=> 'Since you have decided to display a pop-up to encourage users to allow browser notifications, here you have two options on how to display it. The first option is less invasive and also gives user a chance to understand what are the advantages of enabling browser notifications. The second option is less intrusive, but may lead to many denials.',
-	'POPUP_METHOD_ONLY_PROMPT'		=> '<strong>Display directly prompt.</strong> Your users will see the browser prompt directly on all pages they visit until they confirm or deny it.',
-	'POPUP_METHOD_ASK_AFTER_LOGIN'	=> '<strong>Ask once after every login.</strong> Your users will be asked once every time they log in whether they wish to receive browser notifications. Confirming, they will see a browser prompt. Denying, they will never see that pop-up again.',
+	'POPUP_METHOD'					=> 'Vyskakovací okno',
+	'POPUP_METHOD_EXPLAIN'			=> 'Rozhodli jste se používat vyskakovací okno a nyní si můžete vybrat jednu z možností zobrazování vyskakovacího okna. První je velice agresivní a může uživatele otravovat, ale také je donutit k případnému odběru.<br />Druhá možnost již není tolik agresivní a nebude uživatele tolik otravovat čímž jim poskytne více času na rozmyšlení.<br />V obouch případech se vyskakovací okno zobrazuje do té doby, dokud si uživatele nevybere jednu z možností. Poté se již znovu nezobrazuje.',
+	'POPUP_METHOD_ONLY_PROMPT'		=> '<strong>Zobrazovat na každé stránce</strong><br />Uživatelům je vyskakovací okno zobrazováno na každé stránce dokud si nevyberou jednu z možností.',
+	'POPUP_METHOD_ASK_AFTER_LOGIN'	=> '<strong>Zobrazovat po každém přihlášení</strong><br />Uživatelům je vyskakovací okno zobrazeno po každém přihlášení dokud si nevyberou jednu z možností.',
 
-	'SETTINGS_SAVED'	=> 'Browser and Mobile Notifications settings has been saved.',
+	'SETTINGS_SAVED'	=> 'Nastavení upozornění přes prohlížeč bylo uloženo.',
 
 	// Mass notification extension
-	'NOTIFICATION_METHOD' 			=> 'Notification method',
-	'NOTIFICATION_METHOD_EXPLAIN'	=> 'You may choose to send notification via Browser and Mobile Notifications Extension instead of traditional board notification method.',
-	'USE_BOARD_NOTIFICATIONS'		=> 'Use board notifications',
-	'USE_BROWSER_NOTIFICATIONS'		=> 'Use browser notifications',
+	'NOTIFICATION_METHOD' 			=> 'Druh upozornění',
+	'NOTIFICATION_METHOD_EXPLAIN'	=> 'Zde si můžete vybrat jakou formou chcete upozornění uživatelům zaslat.',
+	'USE_BOARD_NOTIFICATIONS'		=> 'Upozornění přes fórum',
+	'USE_BROWSER_NOTIFICATIONS'		=> 'Upozornění přes prohlížeč',
 ));
