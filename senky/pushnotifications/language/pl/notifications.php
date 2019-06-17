@@ -22,14 +22,14 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	'SENKY_PUSHNOTIFICATIONS_NOTIFICATION_METHOD_BROWSER' => 'Przeglądarka',
 
-	'BROWSER_NOTIFICATIONS_ACTION_ENABLED'			=> ' <strong>Włączone</strong> Nie przegapisz żadnych nowych wiadomości na tej witrynie. <a href="javascript:;" id="senky-pushnotifications-btn-unsubscribe">Wyłączyć?</a>',
-	'BROWSER_NOTIFICATIONS_ACTION_ENABLED_SHORT'	=> ' <strong>Włączone</strong> <a href="javascript:;" id="senky-pushnotifications-btn-unsubscribe">Wyłączyć?</a>',
-	'BROWSER_NOTIFICATIONS_ACTION_DISABLED'			=> ' <strong>Wyłączone</strong> <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Kliknij tutaj, aby włączyć powiadomienia w przeglądarce</a>.',
-	'BROWSER_NOTIFICATIONS_ACTION_DISABLED_SHORT'	=> ' <strong>Wyłączone</strong> <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Włączone?</a>',
+	'BROWSER_NOTIFICATIONS_ACTION_ENABLED'			=> ' <strong>włączone.</strong> Nie przegapisz żadnych nowych wiadomości na tej witrynie. <a href="javascript:;" id="senky-pushnotifications-btn-unsubscribe">Wyłącz</a>',
+	'BROWSER_NOTIFICATIONS_ACTION_ENABLED_SHORT'	=> ' <strong>włączone.</strong> <a href="javascript:;" id="senky-pushnotifications-btn-unsubscribe">Wyłącz</a>',
+	'BROWSER_NOTIFICATIONS_ACTION_DISABLED'			=> ' <strong>wyłączone.</strong> <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Kliknij tutaj, aby włączyć powiadomienia w przeglądarce</a>.',
+	'BROWSER_NOTIFICATIONS_ACTION_DISABLED_SHORT'	=> ' <strong>wyłączone.</strong> <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Włącz</a>',
 	'BROWSER_NOTIFICATIONS_ACTION_DISALLOWED'		=> ' <strong>Wymuszone wyłaczenie</strong> <a href=javascript:;" id="senky-pushnotifications-btn-enable">Jak włączyć powiadomienia?</a>',
 	'BROWSER_NOTIFICATIONS_ACTION_DISALLOWED_SHORT'	=> ' <strong>Wyłączone</strong> <a href=javascript:;" id="senky-pushnotifications-btn-enable">Jak włączyć powiadomienia?</a>',
-	'BROWSER_NOTIFICATIONS'							=> 'Powiadomienia w przeglądarce dla tej witryny',
-	'BROWSER_NOTIFICATIONS_SHORT'					=> 'Powiadomienia w przeglądarce',
+	'BROWSER_NOTIFICATIONS'							=> 'Powiadomienia w przeglądarce dla tej witryny są',
+	'BROWSER_NOTIFICATIONS_SHORT'					=> 'Powiadomienia w przeglądarce są',
 	'BROWSER_NOTIFICATIONS_UPDATE_FAILED'			=> 'Wystąpił błąd podczas włączania powiadomień i ustawienia nie zostały zapisane. Sprawdź połączenie internetowe i spróbuj ponownie. Jeśli problem nadal występuje, skontaktuj się z administratorem witryny.',
 	'BROWSER_NOTIFICATIONS_UNSUBSCRIBE_FAILED'		=> 'Wystąpił błąd podczas wyłączania powiadomień i ustawienia nie zostały zapisane. Sprawdź połączenie internetowe i spróbuj ponownie. Jeśli problem nadal występuje, skontaktuj się z administratorem witryny.',
 
@@ -43,6 +43,6 @@ $lang = array_merge($lang, array(
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_UC_FOR_ANDROID'		=> '<ol><li>Przejdź do ustawień przeglądarki (trzy kropki/paski)</li><li>Kliknij ikonę Ustawień, a następnie Ustawienia Powiadomień</li><li>Włącz powiadomienia</li><li>Odśwież stronę i zaakceptuj powiadomienia dla witryny forum</li></ol>',
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_SAMSUNG_FOR_ANDROID'	=> '<ol><li>Przejdź do ustawień przeglądarki (trzy kropki/paski)</li><li>Kliknij Ustawienia, następnie zaawansowane i Powiadomienia</li><li>Włącz powiadomienia</li><li>Odśwież stronę i zaakceptuj powiadomienia dla witryny forum</li></ol>',
 
-	'BROWSER_NOTIFICATIONS_POPUP_TITLE'	=> 'Browser notifications',
-	'BROWSER_NOTIFICATIONS_POPUP_TEXT'	=> 'This board allows you to receive notifications directly to your browser - even when it is closed. You will never miss anything important and you can always choose what type of notifications you receive or turn them all off. Do you want to opt-in now?<br><br><span style="display: block; text-align: center;"><a class="button1 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Yes, please</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button2 alert_close" style="cursor: pointer; float: none; margin-right: 0;">No</a></span>',
+	'BROWSER_NOTIFICATIONS_POPUP_TITLE'	=> 'Powiadomienia w przeglądarce',
+	'BROWSER_NOTIFICATIONS_POPUP_TEXT'	=> 'Na tej witrynie zostaną wyświetlone powiadomienia w przeglądarce, nawet jeśli zostanie ona zminimalizowana. Nie przeoczysz żadnych nowych wiadomości na tej witrynie. W każdej chwili możesz zmienić typ powiadomień lub je wyłaczyć. Czy chcesz to zrobić teraz?<br><br><span style="display: block; text-align: center;"><a class="button1 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Tak</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button2 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Nie</a></span>',
 ));
