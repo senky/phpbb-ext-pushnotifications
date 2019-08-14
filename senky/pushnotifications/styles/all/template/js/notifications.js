@@ -1,7 +1,7 @@
 (function() {
 	// Register service worker. This will be done on every page to make sure notifications are delivered.
 	if ('serviceWorker' in navigator && 'PushManager' in window) {
-		navigator.serviceWorker.register(senky_pushnotifications.serviceWorkerPath)
+		navigator.serviceWorker.register(senky_pushnotifications.serviceWorkerPath, {scope: senky_pushnotifications.serviceWorkerScope})
 		.catch(function(err) {
 			console.log('err registration', err); // TODO
 		});

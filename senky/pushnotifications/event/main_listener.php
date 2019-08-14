@@ -35,7 +35,8 @@ class main_listener implements EventSubscriberInterface
 	protected $user;
 	protected $request;
 	protected $user_loader;
-	public function __construct(\phpbb\template\template $template, \phpbb\config\config $config, \phpbb\controller\helper $helper, \phpbb\auth\auth $auth, \phpbb\user $user, \phpbb\request\request $request, \senky\pushnotifications\notification\user_loader $user_loader)
+	protected $root_path;
+	public function __construct(\phpbb\template\template $template, \phpbb\config\config $config, \phpbb\controller\helper $helper, \phpbb\auth\auth $auth, \phpbb\user $user, \phpbb\request\request $request, \senky\pushnotifications\notification\user_loader $user_loader, $root_path)
 	{
 		$this->template = $template;
 		$this->config = $config;
@@ -44,6 +45,7 @@ class main_listener implements EventSubscriberInterface
 		$this->user = $user;
 		$this->request = $request;
 		$this->user_loader = $user_loader;
+		$this->root_path = $root_path;
 	}
 
 	public function permissions($event)
@@ -73,6 +75,8 @@ class main_listener implements EventSubscriberInterface
 			'SENKY_PUSHNOTIFICATIONS_PUBLIC_KEY'		=> $this->config['senky_pushnotifications_public_key'],
 			'U_SENKY_PUSHNOTIFICATIONS_SUBSCRIBE'		=> $this->helper->route('senky_pushnotifications_subscribe'),
 			'U_SENKY_PUSHNOTIFICATIONS_UNSUBSCRIBE'		=> $this->helper->route('senky_pushnotifications_unsubscribe'),
+			'U_SENKY_PUSHNOTIFICATIONS_SERVICE_WORKER'	=> $this->helper->route('senky_pushnotifications_sw'),
+			'SENKY_PUSHNOTIFICATIONS_SCOPE'				=> $this->root_path,
 			'S_SENKY_PUSHNOTIFICATIONS_DISPLAY_POPUP'	=> $this->should_display_popup(),
 			'S_SENKY_PUSHNOTIFICATIONS_POPUP_METHOD'	=> $this->config['senky_pushnotifications_popup_method'],
 		]);

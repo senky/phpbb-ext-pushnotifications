@@ -32,6 +32,7 @@ services:
             - '@user'
             - '@request'
             - '@senky.pushnotifications.notification.user_loader'
+            - '%core.root_path%'
         tags:
             - { name: event.listener }
 

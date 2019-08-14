@@ -54,6 +54,7 @@ class service_worker
 
 		$response = new Response($content);
 		$response->headers->set('Content-Type', 'application/javascript');
+		$response->headers->set('Service-Worker-Allowed', $this->root_path . (!$this->config['enable_mod_rewrite'] ? '../' : ''));
 		$response->setCharset('UTF-8');
 		return $response;
 	}

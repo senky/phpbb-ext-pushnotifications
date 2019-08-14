@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.3.0 - 2019-08-14
+
+- Fix: The extension works without URL rewriting now.
+
 ### 1.2.0 - 2019-05-28
 
 - Feature: Ability to display pop-up to prompt users to enable browser notifications!
