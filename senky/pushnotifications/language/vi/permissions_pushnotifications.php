@@ -20,5 +20,5 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-	'ACL_U_SENKY_PUSHNOTIFICATIONS' => 'Có thể sử dụng tính năng thông báo trên trình duyệt và điện thoại di động',
+	'ACL_U_SENKY_PUSHNOTIFICATIONS' => 'Có thể sử dụng tính năng thông báo trên trình duyệt và thiết bị di động',
 ));

@@ -26,8 +26,8 @@ $lang = array_merge($lang, array(
 	'BROWSER_NOTIFICATIONS_ACTION_ENABLED_SHORT'	=> ' <strong>Bật</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-unsubscribe">Tắt tính năng?</a>',
 	'BROWSER_NOTIFICATIONS_ACTION_DISABLED'			=> ' <strong>Tắt</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Click vào đây để bật thông báo từ diễn đàn</a>.',
 	'BROWSER_NOTIFICATIONS_ACTION_DISABLED_SHORT'	=> ' <strong>Tắt</strong>. <a href="javascript:;" id="senky-pushnotifications-btn-subscribe">Bật tính năng?</a>',
-	'BROWSER_NOTIFICATIONS_ACTION_DISALLOWED'		=> ' <strong>Forcely disabled</strong>. <a href=javascript:;" id="senky-pushnotifications-btn-enable">How to enable them?</a>',
-	'BROWSER_NOTIFICATIONS_ACTION_DISALLOWED_SHORT'	=> ' <strong>Disabled</strong>. <a href=javascript:;" id="senky-pushnotifications-btn-enable">How to enable?</a>',
+	'BROWSER_NOTIFICATIONS_ACTION_DISALLOWED'		=> ' <strong>Bị tắt hoàn toàn</strong>. <a href=javascript:;" id="senky-pushnotifications-btn-enable">Làm sao bật lại?</a>',
+	'BROWSER_NOTIFICATIONS_ACTION_DISALLOWED_SHORT'	=> ' <strong>Bị tắt</strong>. <a href=javascript:;" id="senky-pushnotifications-btn-enable">Làm sao bật lại?</a>',
 	'BROWSER_NOTIFICATIONS'							=> 'Thông báo trên trình duyệt',
 	'BROWSER_NOTIFICATIONS_SHORT'					=> 'Sử dụng tính năng thông báo trên trình duyệt',
 	'BROWSER_NOTIFICATIONS_UPDATE_FAILED'			=> 'Đã xảy ra lỗi (có thể là lỗi kết nối trong khi liên hệ với máy chủ) trong quá trình bật thông báo web. Họ đã bị vô hiệu hóa trong trình duyệt này. Vui lòng kiểm tra kết nối internet của bạn và thử lại. Liên hệ với quản trị viên nếu vấn đề vẫn còn.',
@@ -43,6 +43,6 @@ $lang = array_merge($lang, array(
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_UC_FOR_ANDROID'		=> '<ol><li>Click vào Menu thanh điều hướng bên dưới.</li><li>Chọn Cài đặt, Cài đặt thông báo, Thông báo của trang web.</li><li>Tìm URL của website và click Xóa.</li><li>Click tải lại trang và bật thông báo.</li></ol>',
 	'BROWSER_NOTIFICATIONS_MANUAL_DESC_SAMSUNG_FOR_ANDROID'	=> '<ol><li>Ở bên phải thanh địa chỉ, Chọn Menu (có dấu 3 chấm).</li><li>Chọn Cài đặt, Nâng cao, Thông báo web.</li><li>Tìm URL của website và bật nó lên.</li><li>Click vào nút tải lại trang.</li></ol>',
 
-	'BROWSER_NOTIFICATIONS_POPUP_TITLE'	=> 'Browser notifications',
-	'BROWSER_NOTIFICATIONS_POPUP_TEXT'	=> 'This board allows you to receive notifications directly to your browser - even when it is closed. You will never miss anything important and you can always choose what type of notifications you receive or turn them all off. Do you want to opt-in now?<br><br><span style="display: block; text-align: center;"><a class="button1 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Yes, please</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button2 alert_close" style="cursor: pointer; float: none; margin-right: 0;">No</a></span>',
+	'BROWSER_NOTIFICATIONS_POPUP_TITLE'	=> 'Thông báo trên trình duyệt',
+	'BROWSER_NOTIFICATIONS_POPUP_TEXT'	=> 'Bạn sẽ nhận được thông báo mới nhất từ diễn đàn - kể cả khi trình duyệt đã bị đóng - bạn sẽ không bỏ lỡ bất kỳ thông tin nào trên diễn đàn. Bạn cũng dễ dàng thay đổi tùy chọn này. Bạn muốn nhận thông báo ngay chứ?<br><br><span style="display: block; text-align: center;"><a class="button1 alert_close" style="cursor: pointer; float: none; margin-right: 0;">Ok luôn</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="button2 alert_close" style="cursor: pointer; float: none; margin-right: 0;">No</a></span>',
 ));
