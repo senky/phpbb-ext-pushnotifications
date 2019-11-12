@@ -60,6 +60,11 @@ $lang = array_merge($lang, array(
 											povolili alebo zamietli notifikácie, takže sa nemusíte báť o ož rozhodnutých používateľov.',
 	'CLOSE'								=> 'Zatvoriť',
 
+	'POPUP_METHOD'					=> 'Typ vyskakovacieho okna',
+	'POPUP_METHOD_EXPLAIN'			=> 'Keďže ste sa rozhodli zobrazovať vyskakovacie okno aby ste povzbudili používateľov povoliť notifikácie v prehliadači, máte na výber dve možnosti ako toto okno zobraziť. Prvá možnosť je menej invazívna a taktiež ponúka používateľovi šancu pochopiť aké sú výhody povolenia notifikácií. Druhá možnosť je menej dotieravá ale môže viesť k množstvu zamietnutých notifikácií.',
+	'POPUP_METHOD_ONLY_PROMPT'		=> '<strong>Zobraziť priamo žiadosť.</strong> Vaši používatelia uvidia priamo žiadosť od prehliadača na povolenie notifikácií na každej stránke až kým túto žiadosť neschvália alebo nezamietnu.',
+	'POPUP_METHOD_ASK_AFTER_LOGIN'	=> '<strong>Opýtať sa raz po každom prihlásení.</strong> Vaši používatelia budú konfrontovaní s otázkou o povolenie notifikácií vždy raz po tom ako sa prihlásia. Ak to schvália, ukáže sa im žiadosť z prehliadača. Ak to zamietnu, už sa im toto okno nikdy nezobrazí.',
+
 	'SETTINGS_SAVED'	=> 'Nastavenia notifikácií v prehliadači a mobile boli uložené.',
 
 	// Mass notification extension
