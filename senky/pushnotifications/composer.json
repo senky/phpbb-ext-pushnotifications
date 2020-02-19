@@ -23,7 +23,7 @@
         "licensee": "{{LICENSEE}}",
         "display-name": "Browser & Mobile Notifications",
         "soft-require": {
-            "phpbb/phpbb": ">=3.2.0,<3.3.0@dev"
+            "phpbb/phpbb": ">=3.2.0,<3.4.0@dev"
         }
     }
 }
