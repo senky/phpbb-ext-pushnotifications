@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.3.1 - 2020-12-28
+
+- Fix: Firefox disabling notifications by default.
+
 ### 1.3.0 - 2019-08-14
 
 - Fix: The extension works without URL rewriting now.
