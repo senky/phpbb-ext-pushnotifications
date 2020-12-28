@@ -161,8 +161,8 @@
 				updateSubscriptionOnServer(subscription);
 				localStorage.setItem('senky_pushnotifications_receive', true);
 				updateLabel();
-			}).catch(function(err) {
-				if (Notification.permission !== 'denied') {
+			}).catch(function() {
+				if (Notification.permission !== 'denied' && Notification.permission !== 'default') {
 					phpbb.alert(senky_pushnotifications.lang.INFORMATION, senky_pushnotifications.lang.UPDATE_FAILED);
 				}
 				updateLabel();
