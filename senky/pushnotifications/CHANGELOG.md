@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.3.2 - 2021-01-21
+
+- Feature: Added support for Metro Golden style.
+
 ### 1.3.1 - 2020-12-28
 
 - Fix: Firefox disabling notifications by default.
